@@ -63,7 +63,7 @@ def fun2(mail1,event,reg1,mail2,reg2):
     message='Subject: {}\n\n{}'.format(event, text)
     server.sendmail("21i252@psgtech.ac.in",mail1,message)
 
-    text=f"Hello {reg2}\nYou and {reg1} have successffully registered to {event}."
+    text=f"Hello {reg2}\nYou and {reg1}have successffully registered to {event}."
     message='Subject: {}\n\n{}'.format(event, text)
     server.sendmail("21i252@psgtech.ac.in",mail2,message)
     server.quit()
@@ -75,7 +75,7 @@ if sb=="One":
     reg=st.text_input('Register ID of participant:')
     name=st.text_input('Name of participant: [Case sensitive]')
     ph=st.text_input('Contact number of participant:')
-    event=st.selectbox("Select the event: ",options=["--Choose--","Techrival","Hacklite","Tacktile Arena", "Trinifty","Workshop", "Generic-Run"],index=0)
+    event=st.selectbox("Select the event: ",options=["--Choose--","Techrival","Hacklite","Tactile Arena", "triNiFTy","Workshop", "Generic - Run"],index=0)
     if st.button("Submit"):
         if reg[:5] =="IETE_":
             if event=="Techrival":
@@ -139,7 +139,7 @@ if sb=="One":
                 else:
                     st.error("Invalid Register ID.")
             
-            elif event=="Tacktile Arena":
+            elif event=="Tactile Arena":
                 creds5 = ServiceAccountCredentials.from_json_keyfile_name("final5.json", scope)
                 client5 = gspread.authorize(creds5)
                 sheet5 = client5.open("Tacktile Arena").sheet1
@@ -163,7 +163,7 @@ if sb=="One":
                 else:
                     st.error("Invalid Register ID.")
 
-            elif event=="Trinifty":
+            elif event=="triNiFTy":
                 creds6 = ServiceAccountCredentials.from_json_keyfile_name("final6.json", scope)
                 client6 = gspread.authorize(creds6)
                 sheet6 = client6.open("Trinifty").sheet1
@@ -209,7 +209,7 @@ if sb=="One":
                             break
                 else:
                     st.error("Invalid Register ID.")
-            elif event=="Generic-Run":
+            elif event=="Generic - Run":
                 creds8 = ServiceAccountCredentials.from_json_keyfile_name("final8.json", scope)
                 client8 = gspread.authorize(creds8)
                 sheet8 = client8.open("Generic run").sheet1
@@ -260,10 +260,10 @@ if sb=="Two":
     name2=st.text_input('Name of participant 2: [Case sensitive]')
     ph2=st.text_input('Contact number of participant 2:')
     
-    event=st.selectbox("Select the event: ",options=["--Choose--","Tacktile Arena", "Generic-Run"],index=0)
+    event=st.selectbox("Select the event: ",options=["--Choose--","Tactile Arena", "Generic - Run"],index=0)
     if st.button("Submit"):
         if reg1[:5] =="IETE_":
-            if event=="Tacktile Arena":
+            if event=="Tactile Arena":
                 creds5 = ServiceAccountCredentials.from_json_keyfile_name("final5.json", scope)
                 client5 = gspread.authorize(creds5)
                 sheet5 = client5.open("Tacktile Arena").sheet1
@@ -299,7 +299,7 @@ if sb=="Two":
         else:
             st.error("Invalid Participant 1 Register ID.")
         if reg1[:5] =="IETE_":
-            if event=="Generic-Run":
+            if event=="Generic - Run":
                 creds8 = ServiceAccountCredentials.from_json_keyfile_name("final8.json", scope)
                 client8 = gspread.authorize(creds8)
                 sheet8 = client8.open("Generic run").sheet1
