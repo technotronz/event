@@ -101,7 +101,7 @@ if sb=="One":
                         print(2)
                         if(data[i][1]==name):
                             if data[i][6]==ph:
-                                sheet2.insert_row([reg,name,ph],len(data2)+1)
+                                sheet2.insert_row([reg,name,ph,data[i][3]],len(data2)+1)
                                 st.success("Successfully registered to the Techrival! (Email is sent to registered Mail ID)")
                                 st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                 fun(data[i][3],"Techrival",data[i][1])
@@ -125,7 +125,7 @@ if sb=="One":
                         print(2)
                         if(data[i][1]==name):
                             if data[i][6]==ph:
-                                sheet4.insert_row([reg,name,ph],len(data4)+1)
+                                sheet4.insert_row([reg,name,ph,data[i][3]],len(data4)+1)
                                 st.success("Successfully registered to the Hacklite! (Email is sent to registered Mail ID)")
                                 st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                 fun(data[i][3],"Hacklite",data[i][1])
@@ -149,7 +149,7 @@ if sb=="One":
                         print(2)
                         if(data[i][1]==name):
                             if data[i][6]==ph:
-                                sheet5.insert_row([reg,name,ph],len(data5)+1)
+                                sheet5.insert_row([reg,name,ph,data[i][3]],len(data5)+1)
                                 st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                 st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                 fun(data[i][3],event,data[i][1])
@@ -173,7 +173,7 @@ if sb=="One":
                         print(2)
                         if(data[i][1]==name):
                             if data[i][6]==ph:
-                                sheet6.insert_row([reg,name,ph],len(data6)+1)
+                                sheet6.insert_row([reg,name,ph,data[i][3]],len(data6)+1)
                                 st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                 st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                 fun(data[i][3],event,data[i][1])
@@ -196,7 +196,7 @@ if sb=="One":
                         print(2)
                         if(data[i][1]==name):
                             if data[i][6]==ph:
-                                sheet7.insert_row([reg,name,ph],len(data7)+1)
+                                sheet7.insert_row([reg,name,ph,data[i][3]],len(data7)+1)
                                 st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                 st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                 fun(data[i][3],event,data[i][1])
@@ -219,7 +219,7 @@ if sb=="One":
                         print(2)
                         if(data[i][1]==name):
                             if data[i][6]==ph:
-                                sheet8.insert_row([reg,name,ph],len(data8)+1)
+                                sheet8.insert_row([reg,name,ph,data[i][3]],len(data8)+1)
                                 st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                 st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                 fun(data[i][3],event,data[i][1])
@@ -278,7 +278,7 @@ if sb=="Two":
                                         print(2)
                                         if(data[j][1]==name2):
                                             if data[j][6]==ph2:
-                                                sheet5.insert_row([reg1,name1,ph1,"2nd Part.",reg2,name2,ph2],len(data5)+1)
+                                                sheet5.insert_row([reg1,name1,ph1,data[i][3],"2nd Part.",reg2,name2,ph2,data[j][3]],len(data5)+1)
                                                 st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                                 st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                                 fun2(data[i][3],event,data[i][1],data[j][3],data[j][1])
@@ -314,7 +314,7 @@ if sb=="Two":
                                         print(2)
                                         if(data[j][1]==name2):
                                             if data[j][6]==ph2:
-                                                sheet8.insert_row([reg1,name1,ph1,"2nd Part.",reg2,name2,ph2],len(data8)+1)
+                                                sheet8.insert_row([reg1,name1,ph1,data[i][3],"2nd Part.",reg2,name2,ph2,data[i][3]],len(data8)+1)
                                                 st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                                 st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                                 fun2(data[i][3],event,data[i][1],data[j][3],data[j][1])
