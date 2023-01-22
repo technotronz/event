@@ -52,18 +52,18 @@ data=sheet.get_all_values()
 def fun(mail,event,reg):
     server=smtplib.SMTP_SSL("smtp.gmail.com",465)
     server.login("21i252@psgtech.ac.in","A1.2.3.4.5.6")
-    text=f"Hello {reg}\nYou have successfully registered to {event}."
+    text=f"Hello {reg}\nYou have successfully registered to {event}.\n\nBest regards,\nTeam Technotronz."
     message='Subject: {}\n\n{}'.format("Registered in "+ event, text)
     server.sendmail("21i252@psgtech.ac.in",mail,message)
     server.quit()
 def fun2(mail1,event,reg1,mail2,reg2):
     server=smtplib.SMTP_SSL("smtp.gmail.com",465)
     server.login("21i252@psgtech.ac.in","A1.2.3.4.5.6")
-    text=f"Hello {reg1}\nYou and {reg2}have successfully registered to {event}."
+    text=f"Hello {reg1}\nYou and {reg2}have successfully registered to {event}.\n\nBest regards,\nTeam Technotronz."
     message='Subject: {}\n\n{}'.format("Registered in "+ event, text)
     server.sendmail("21i252@psgtech.ac.in",mail1,message)
 
-    text=f"Hello {reg2}\nYou and {reg1}have successffully registered to {event}."
+    text=f"Hello {reg2}\nYou and {reg1}have successffully registered to {event}.\n\nBest regards,\nTeam Technotronz."
     message='Subject: {}\n\n{}'.format(event, text)
     server.sendmail("21i252@psgtech.ac.in",mail2,message)
     server.quit()
