@@ -77,7 +77,7 @@ if sb=="One":
     ph=st.text_input('Contact number of participant:')
     event=st.selectbox("Select the event: ",options=["--Choose--","Techrival","Hacklite","Tactile Arena", "triNiFTy","Workshop", "Generic - Run"],index=0)
     if st.button("Submit"):
-        if reg[:5] =="IETE_":
+        if reg[:4] =="TZ23":
             if event=="Techrival":
                 # print("1")
                 # for i in range(1,len(data)+1):
@@ -262,7 +262,7 @@ if sb=="Two":
     
     event=st.selectbox("Select the event: ",options=["--Choose--","Tactile Arena", "Generic - Run"],index=0)
     if st.button("Submit"):
-        if reg1[:5] =="IETE_":
+        if reg1[:4] =="TZ23":
             if event=="Tactile Arena":
                 creds5 = ServiceAccountCredentials.from_json_keyfile_name("final5.json", scope)
                 client5 = gspread.authorize(creds5)
@@ -298,7 +298,7 @@ if sb=="Two":
                             break
         else:
             st.error("Invalid Participant 1 Register ID.")
-        if reg1[:5] =="IETE_":
+        if reg1[:4] =="TZ23":
             if event=="Generic - Run":
                 creds8 = ServiceAccountCredentials.from_json_keyfile_name("final8.json", scope)
                 client8 = gspread.authorize(creds8)
