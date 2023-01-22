@@ -63,7 +63,7 @@ def fun2(mail1,event,reg1,mail2,reg2):
     message='Subject: {}\n\n{}'.format(event, text)
     server.sendmail("21i252@psgtech.ac.in",mail1,message)
 
-    text=f"Hello {reg2}\nYou and {reg1}have successffully registered to {event}."
+    text=f"Hello {reg2}\nYou and {reg1} have successffully registered to {event}."
     message='Subject: {}\n\n{}'.format(event, text)
     server.sendmail("21i252@psgtech.ac.in",mail2,message)
     server.quit()
