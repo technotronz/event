@@ -5,7 +5,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 import smtplib
 import streamlit as st
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
-st.set_page_config(page_title="<yet to decide>")
+st.set_page_config(page_title="Event Registration")
 hide_ststyle = """
             <style>
             #MainMenu {visibility: hidden;}
