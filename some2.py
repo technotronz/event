@@ -111,7 +111,9 @@ if event=="Techrival":
                                 if data[i][6]==ph:
                                     sheet2.insert_row([reg,name,ph,data[i][3]],len(data2)+1)
                                     st.success("Successfully registered to the Techrival! (Email is sent to registered Mail ID)")
-                                    st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+                                    c1,c2,c3,c4=st.columns([1,1,1,1])
+                                    with c2:
+                                                st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     fun(data[i][3],"Techrival",data[i][1])
                                     break
                                 else:
