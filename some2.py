@@ -49,7 +49,7 @@ data=sheet.get_all_values()
 # client8 = gspread.authorize(creds8)
 # sheet8 = client8.open("Generic run").sheet1
 # data8=sheet8.get_all_values()
-col1,col2,col3=st.columns([2,1,2])
+# col1,col2,col3=st.columns([2,1,2])
 m = st.markdown("""
 <style>
 div.stButton > button:first-child {
@@ -94,6 +94,7 @@ if event=="Techrival":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
+        col1,col2,col3=st.columns([2,1,2])
         with col2:
             d=st.button("Submit")
         if d:
@@ -128,6 +129,7 @@ elif event=="Hacklite":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
+        col1,col2,col3=st.columns([2,1,2])
         with col2:
             d=st.button("Submit")
         if d:
@@ -163,6 +165,7 @@ elif event=="Tactile Arena":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
+        col1,col2,col3=st.columns([2,1,2])
         with col2:
             d=st.button("Submit")
         if d:
@@ -202,6 +205,7 @@ elif event=="Tactile Arena":
         reg2=st.text_input('Register ID of participant 2:')
         name2=st.text_input('Name of participant 2: [Case sensitive]')
         ph2=st.text_input('Contact number of participant 2:')
+        col1,col2,col3=st.columns([2,1,2])
         with col2:
             d=st.button("Submit")
         if d:
@@ -249,6 +253,7 @@ elif event=="triNiFTy":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
+        col1,col2,col3=st.columns([2,1,2])
         with col2:
             d=st.button("Submit")
         if d:
@@ -282,6 +287,7 @@ elif event=="Workshop":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
+        col1,col2,col3=st.columns([2,1,2])
         with col2:
             d=st.button("Submit")
         if d:
@@ -317,6 +323,7 @@ elif event=="Generic - Run":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
+        col1,col2,col3=st.columns([2,1,2])
         with col2:
             d=st.button("Submit")
         if d:
@@ -356,6 +363,7 @@ elif event=="Generic - Run":
         reg2=st.text_input('Register ID of participant 2:')
         name2=st.text_input('Name of participant 2: [Case sensitive]')
         ph2=st.text_input('Contact number of participant 2:')
+        col1,col2,col3=st.columns([2,1,2])
         with col2:
             d=st.button("Submit")
         if d:
