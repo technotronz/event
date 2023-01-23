@@ -66,17 +66,18 @@ def fun(mail,event,reg):
     server=smtplib.SMTP_SSL("smtp.gmail.com",465)
     server.login("21i252@psgtech.ac.in","A1.2.3.4.5.6")
     text=f"Hello {reg}!\nYou have successfully registered to {event}.\n\nBest regards,\nTeam Technotronz."
+text=f"Hello {reg}!\nWe are gratified to announce that you have successfully registered for {event}.\nMake sure you join our discord server to receive regular updates: https://discord.gg/C6qpa97T\\nAll the very best!\n\nBest regards,\nTeam Technotronz."
     message='Subject: {}\n\n{}'.format("Registered in "+ event, text)
     server.sendmail("21i252@psgtech.ac.in",mail,message)
     server.quit()
 def fun2(mail1,event,reg1,mail2,reg2):
     server=smtplib.SMTP_SSL("smtp.gmail.com",465)
     server.login("21i252@psgtech.ac.in","A1.2.3.4.5.6")
-    text=f"Hello {reg1}!\nYou and {reg2} have successfully registered to {event}.\n\nBest regards,\nTeam Technotronz."
+    text=f"Hello {reg1}!\nWe are gratified to announce that you and {reg2} have successfully registered for {event}.\nMake sure you join our discord server to receive regular updates: https://discord.gg/C6qpa97T\nAll the very best!\n\nBest regards,\nTeam Technotronz."
     message='Subject: {}\n\n{}'.format("Registered in "+ event, text)
     server.sendmail("21i252@psgtech.ac.in",mail1,message)
 
-    text=f"Hello {reg2}!\nYou and {reg1} have successffully registered to {event}.\n\nBest regards,\nTeam Technotronz."
+    text=f"Hello {reg2}!\nWe are gratified to announce that you and {reg1} have successfully registered for {event}.\nMake sure you join our discord server to receive regular updates: https://discord.gg/C6qpa97T\\nAll the very best!\n\nBest regards,\nTeam Technotronz."
     message='Subject: {}\n\n{}'.format("Registered in "+event, text)
     server.sendmail("21i252@psgtech.ac.in",mail2,message)
     server.quit()
@@ -111,9 +112,9 @@ if event=="Techrival":
                                 if data[i][6]==ph:
                                     sheet2.insert_row([reg,name,ph,data[i][3]],len(data2)+1)
                                     st.success("Successfully registered to the Techrival! (Email is sent to registered Mail ID)")
-                                    c1,c2,c3,c4=st.columns([1,1,1,1])
-                                    with c2:
-                                                st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+#                                     c1,c2,c3,c4=st.columns([1,1,1,1])
+#                                     with c2:
+                                    st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     fun(data[i][3],"Techrival",data[i][1])
                                     break
                                 else:
