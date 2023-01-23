@@ -90,7 +90,7 @@ event=st.selectbox("Select the event: ",options=["--Choose--","Techrival","Hackl
 #         ph=st.text_input('Your contact number:')
 #         if st.button("Submit"):
 if event=="Techrival":
-        st.header("Fill in the appropriate registered details ⬇️")
+        st.header("Fill in the appropriate details ⬇️")
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
@@ -124,7 +124,7 @@ if event=="Techrival":
             else:
                     st.error("Invalid Register ID.")
 elif event=="Hacklite":
-        st.header("Fill in the appropriate registered details ⬇️")
+        st.header("Fill in the appropriate details ⬇️")
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
@@ -159,7 +159,7 @@ elif event=="Hacklite":
 elif event=="Tactile Arena":
     p=st.selectbox("Selelct the number of participants: ",options=["--Choose--","One","Two"])
     if p=="One":
-        st.header("Fill in the appropriate registered details ⬇️")
+        st.header("Fill in the appropriate details ⬇️")
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
@@ -192,7 +192,7 @@ elif event=="Tactile Arena":
             else:
                 st.error("Invalid Register ID.")
     elif p=="Two":
-        st.header("Fill in the appropriate registered details ⬇️")
+        st.header("Fill in the appropriate details ⬇️")
         st.header("Participant 1: ")
         reg1=st.text_input('Register ID of participant 1:')
         name1=st.text_input('Name of participant 1: [Case sensitive]')
@@ -245,7 +245,7 @@ elif event=="Tactile Arena":
                 st.error("Invalid Participant 1 Register ID.")                 
 
 elif event=="triNiFTy":
-        st.header("Fill in the appropriate registered details ⬇️")
+        st.header("Fill in the appropriate details ⬇️")
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
@@ -278,7 +278,7 @@ elif event=="triNiFTy":
             else:
                 st.error("Invalid Register ID.")
 elif event=="Workshop":
-        st.header("Fill in the appropriate registered details ⬇️")
+        st.header("Fill in the appropriate details ⬇️")
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
@@ -313,7 +313,7 @@ elif event=="Workshop":
 elif event=="Generic - Run":
     p=st.selectbox("Selelct the number of participants: ",options=["--Choose--","One","Two"])
     if p=="One":
-        st.header("Fill in the appropriate registered details ⬇️")
+        st.header("Fill in the appropriate details ⬇️")
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
@@ -346,7 +346,7 @@ elif event=="Generic - Run":
             else:
                 st.error("Invalid Register ID")
     if p=="Two":
-        st.header("Fill in the appropriate registered details ⬇️")
+        st.header("Fill in the appropriate details ⬇️")
         st.header("Participant 1: ")
         reg1=st.text_input('Register ID of participant 1:')
         name1=st.text_input('Name of participant 1: [Case sensitive]')
