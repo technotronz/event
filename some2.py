@@ -94,6 +94,8 @@ if event=="Techrival":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
+        with col2:
+            d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
                     creds2 = ServiceAccountCredentials.from_json_keyfile_name("final2.json", scope)
@@ -126,6 +128,8 @@ elif event=="Hacklite":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
+        with col2:
+            d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
                     creds4 = ServiceAccountCredentials.from_json_keyfile_name("final4.json", scope)
@@ -159,6 +163,8 @@ elif event=="Tactile Arena":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
+        with col2:
+            d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
                     creds5 = ServiceAccountCredentials.from_json_keyfile_name("final5.json", scope)
@@ -196,6 +202,8 @@ elif event=="Tactile Arena":
         reg2=st.text_input('Register ID of participant 2:')
         name2=st.text_input('Name of participant 2: [Case sensitive]')
         ph2=st.text_input('Contact number of participant 2:')
+        with col2:
+            d=st.button("Submit")
         if d:
             if reg1[:4] =="TZ23":
                     creds5 = ServiceAccountCredentials.from_json_keyfile_name("final5.json", scope)
@@ -241,6 +249,8 @@ elif event=="triNiFTy":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
+        with col2:
+            d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
                     creds6 = ServiceAccountCredentials.from_json_keyfile_name("final6.json", scope)
@@ -272,6 +282,8 @@ elif event=="Workshop":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
+        with col2:
+            d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
                     creds7 = ServiceAccountCredentials.from_json_keyfile_name("final7.json", scope)
@@ -305,6 +317,8 @@ elif event=="Generic - Run":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
+        with col2:
+            d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
                     creds8 = ServiceAccountCredentials.from_json_keyfile_name("final8.json", scope)
@@ -342,6 +356,8 @@ elif event=="Generic - Run":
         reg2=st.text_input('Register ID of participant 2:')
         name2=st.text_input('Name of participant 2: [Case sensitive]')
         ph2=st.text_input('Contact number of participant 2:')
+        with col2:
+            d=st.button("Submit")
         if d:
             if reg1[:4] =="TZ23":
                 creds8 = ServiceAccountCredentials.from_json_keyfile_name("final8.json", scope)
