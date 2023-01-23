@@ -49,6 +49,19 @@ data=sheet.get_all_values()
 # client8 = gspread.authorize(creds8)
 # sheet8 = client8.open("Generic run").sheet1
 # data8=sheet8.get_all_values()
+col1,col2,col3=st.columns([2,1,2])
+m = st.markdown("""
+<style>
+div.stButton > button:first-child {
+    background-color: rgb(255, 255, 255);
+    height:1.5em;
+    width: 3em; 
+    font-size: 29px;
+    color: black;
+}
+</style>""", unsafe_allow_html=True)
+with col2:
+            d=st.button("Submit")
 def fun(mail,event,reg):
     server=smtplib.SMTP_SSL("smtp.gmail.com",465)
     server.login("21i252@psgtech.ac.in","A1.2.3.4.5.6")
@@ -81,7 +94,7 @@ if event=="Techrival":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
-        if st.button("Submit"):
+        if d:
             if reg[:4] =="TZ23":
                     creds2 = ServiceAccountCredentials.from_json_keyfile_name("final2.json", scope)
                     client2 = gspread.authorize(creds2)
@@ -113,7 +126,7 @@ elif event=="Hacklite":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
-        if st.button("Submit"):
+        if d:
             if reg[:4] =="TZ23":
                     creds4 = ServiceAccountCredentials.from_json_keyfile_name("final4.json", scope)
                     client4 = gspread.authorize(creds4)
@@ -146,7 +159,7 @@ elif event=="Tactile Arena":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
-        if st.button("Submit"):
+        if d:
             if reg[:4] =="TZ23":
                     creds5 = ServiceAccountCredentials.from_json_keyfile_name("final5.json", scope)
                     client5 = gspread.authorize(creds5)
@@ -183,7 +196,7 @@ elif event=="Tactile Arena":
         reg2=st.text_input('Register ID of participant 2:')
         name2=st.text_input('Name of participant 2: [Case sensitive]')
         ph2=st.text_input('Contact number of participant 2:')
-        if st.button("Submit"):
+        if d:
             if reg1[:4] =="TZ23":
                     creds5 = ServiceAccountCredentials.from_json_keyfile_name("final5.json", scope)
                     client5 = gspread.authorize(creds5)
@@ -228,7 +241,7 @@ elif event=="triNiFTy":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
-        if st.button("Submit"):
+        if d:
             if reg[:4] =="TZ23":
                     creds6 = ServiceAccountCredentials.from_json_keyfile_name("final6.json", scope)
                     client6 = gspread.authorize(creds6)
@@ -259,7 +272,7 @@ elif event=="Workshop":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
-        if st.button("Submit"):
+        if d:
             if reg[:4] =="TZ23":
                     creds7 = ServiceAccountCredentials.from_json_keyfile_name("final7.json", scope)
                     client7 = gspread.authorize(creds7)
@@ -292,7 +305,7 @@ elif event=="Generic - Run":
         reg=st.text_input('Your register ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
-        if st.button("Submit"):
+        if d:
             if reg[:4] =="TZ23":
                     creds8 = ServiceAccountCredentials.from_json_keyfile_name("final8.json", scope)
                     client8 = gspread.authorize(creds8)
@@ -329,7 +342,7 @@ elif event=="Generic - Run":
         reg2=st.text_input('Register ID of participant 2:')
         name2=st.text_input('Name of participant 2: [Case sensitive]')
         ph2=st.text_input('Contact number of participant 2:')
-        if st.button("Submit"):
+        if d:
             if reg1[:4] =="TZ23":
                 creds8 = ServiceAccountCredentials.from_json_keyfile_name("final8.json", scope)
                 client8 = gspread.authorize(creds8)
