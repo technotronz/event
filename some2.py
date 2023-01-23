@@ -62,7 +62,7 @@ div.stButton > button:first-child {
 </style>""", unsafe_allow_html=True)
 # with col2:
 #             d=st.button("Submit")
-link="https://discord.gg/C6qpa97T\"
+link="https://discord.gg/C6qpa97T\""
 def fun(mail,event,reg):
     server=smtplib.SMTP_SSL("smtp.gmail.com",465)
     server.login("21i252@psgtech.ac.in","A1.2.3.4.5.6")
