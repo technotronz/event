@@ -4,6 +4,8 @@ from oauth2client.service_account import ServiceAccountCredentials
 # from  pydrive.auth import GoogleAuth
 import smtplib
 import streamlit as st
+from PIL import Image
+
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 st.set_page_config(page_title="Technotronz'23 Event Registration",page_icon="Untitled design.png")
 hide_ststyle = """
@@ -14,7 +16,8 @@ hide_ststyle = """
             </style>
             """
 st.markdown(hide_ststyle, unsafe_allow_html=True)
-
+img = Image.open('TZ_logo2.png')
+st.image(img)
 creds = ServiceAccountCredentials.from_json_keyfile_name("final.json", scope)
 client = gspread.authorize(creds)
 sheet = client.open("registration").sheet1
