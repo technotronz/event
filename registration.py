@@ -88,6 +88,8 @@ def fun3():
               st.markdown(link, unsafe_allow_html=True)
 # def fun3(mail,event,)
 st.title("Technotronz'23 Event Registration")
+note_er = 'Note: If you have not completed the general registration, **[click here](https://technotronz-general-registration-tkl0ww.streamlit.app/)** to register and get your registration ID.'
+st.markdown(note_er, unsafe_allow_html=True)
 event=st.selectbox("Select the event: ",options=["--Choose--","Techrival","Hacklite","Tactile Arena", "triNiFTy","Techverse - Workshop", "Generic - Run"],index=0)
 # p=st.selectbox("Selelct the number of participants: ",options=["--Choose--","One","Two"])
 # if p=="One":
