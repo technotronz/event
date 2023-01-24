@@ -18,6 +18,7 @@ hide_ststyle = """
 st.markdown(hide_ststyle, unsafe_allow_html=True)
 img = Image.open('TZ_logo2.png')
 st.image(img)
+
 creds = ServiceAccountCredentials.from_json_keyfile_name("final.json", scope)
 client = gspread.authorize(creds)
 sheet = client.open("registration").sheet1
@@ -90,7 +91,10 @@ def fun3():
               link = '[Make sure you join our discord server to receive regular updates](https://discord.gg/Pf4cqxZtQu)'
               st.markdown(link, unsafe_allow_html=True)
 # def fun3(mail,event,)
-st.title("Technotronz'23 Event Registration")
+one,two,thr=st.columns([0.1,1, 0.1])
+with two:
+            st.header("Technotronz'23 Event Registration")
+# st.title("Technotronz'23 Event Registration")
 note_er = 'Note: If you have not completed the general registration, **[click here](https://technotronz-general-registration-tkl0ww.streamlit.app/)** to register and get your registration ID.'
 st.markdown(note_er, unsafe_allow_html=True)
 event=st.selectbox("Select the event: ",options=["--Choose--","Techrival","Hacklite","Tactile Arena", "triNiFTy","Techverse - Workshop", "Generic - Run"],index=0)
