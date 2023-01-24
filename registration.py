@@ -308,7 +308,7 @@ elif event=="triNiFTy":
             else:
                 st.error("Invalid Register ID.")
 elif event=="Techverse - Workshop":
-    ch=st.selectbox("Click the credential: ",options=["--Choose--","Campus Ambassador","PSG Tech Student","IETE membership holder","None of the above"])
+    ch=st.selectbox("Select the category to avail your discount: ",options=["--Choose--","Campus Ambassador","PSG Tech Student","IETE membership holder","None of the above"])
     if ch=="Campus Ambassador":
         st.header("Fill in the appropriate details ⬇️")
         reg=st.text_input('Your registration ID:')
