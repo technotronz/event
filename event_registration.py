@@ -82,6 +82,8 @@ def fun2(mail1,event,reg1,mail2,reg2):
     message='Subject: {}\n\n{}'.format("Registered in "+event, text)
     server.sendmail("21i252@psgtech.ac.in",mail2,message)
     server.quit()
+def fun3():
+            st.write(f'''<a target="_self" href="https://discord.gg/WgEDCtPN" target="_blank"><button>Click to join Technotronz'23 Discord server to follow regular updates</button></a>''',unsafe_allow_html=True)
 # def fun3(mail,event,)
 st.title("Technotronz'23 Event Registration")
 event=st.selectbox("Select the event: ",options=["--Choose--","Techrival","Hacklite","Tactile Arena", "triNiFTy","Techverse - Workshop", "Generic - Run"],index=0)
@@ -114,6 +116,7 @@ if event=="Techrival":
                                 if data[i][6]==ph:
                                     sheet2.insert_row([reg,name,ph,data[i][3]],len(data2)+1)
                                     st.success("Successfully registered to the Techrival! (Email is sent to registered Mail ID)")
+                                    fun3()
 #                                     c1,c2,c3,c4=st.columns([1,1,1,1])
 #                                     with c2:
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
@@ -152,6 +155,7 @@ elif event=="Hacklite":
                                     st.success("Successfully registered to the Hacklite! (Email is sent to registered Mail ID)")
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     fun(data[i][3],"Hacklite",data[i][1])
+                                    fun3()
                                     break
                                 else:
                                     st.error("Invalid Register Contact Number")
@@ -188,6 +192,7 @@ elif event=="Tactile Arena":
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     fun(data[i][3],event,data[i][1])
+                                    fun3()
                                     break
                                 else:
                                     st.error("Invalid Register Contact Number")
@@ -233,6 +238,7 @@ elif event=="Tactile Arena":
                                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                                     fun2(data[i][3],event,data[i][1],data[j][3],data[j][1])
+                                                    fun3()
                                                     break
                                                 else:
                                                     st.error("Invalid Participant 2 Contact Number")
@@ -276,6 +282,7 @@ elif event=="triNiFTy":
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     fun(data[i][3],event,data[i][1])
+                                    fun3()
                                     break
                                 else:
                                     st.error("Invalid Register Contact Number")
@@ -312,6 +319,7 @@ elif event=="Techverse - Workshop":
                                     sheet7.insert_row([reg,name,ph,data[i][3],ch,adm],len(data7)+1)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                     st.write("Check out mail regarding payment details and stay tuned for further updates!")
+                                    fun3()
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     # fun3(data[i][3],event,data[i][1],ch)
                                     break
@@ -349,6 +357,7 @@ elif event=="Techverse - Workshop":
                                     sheet7.insert_row([reg,name,ph,data[i][3],ch,rollno],len(data7)+1)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                     st.write("Check out mail regarding payment details and stay tuned for further updates!")
+                                    fun3()
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     # fun3(data[i][3],event,data[i][1],ch)
                                     break
@@ -386,6 +395,7 @@ elif event=="Techverse - Workshop":
                                     sheet7.insert_row([reg,name,ph,data[i][3],ch,rollno],len(data7)+1)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                     st.write("Check out mail regarding payment details and stay tuned for further updates!")
+                                    fun3()
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     # fun3(data[i][3],event,data[i][1],ch)
                                     break
@@ -423,6 +433,7 @@ elif event=="Techverse - Workshop":
                                     sheet7.insert_row([reg,name,ph,data[i][3],ch,sf],len(data7)+1)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                     st.write("Check out mail regarding payment details and stay tuned for further updates!")
+                                    fun3()
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     # fun3(data[i][3],event,data[i][1],ch)
                                     break
@@ -492,6 +503,7 @@ elif event=="Generic - Run":
                                 if data[i][6]==ph:
                                     sheet8.insert_row([reg,name,ph,data[i][3]],len(data8)+1)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
+                                    fun3()
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     fun(data[i][3],event,data[i][1])
                                     break
@@ -539,6 +551,7 @@ elif event=="Generic - Run":
                                                 st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                                 # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                                 fun2(data[i][3],event,data[i][1],data[j][3],data[j][1])
+                                                fun3()
                                                 break
                                             else:
                                                 st.error("Invalid Participant 2 Contact Number")
