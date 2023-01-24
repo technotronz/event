@@ -91,7 +91,7 @@ def fun3():
               link = '[Make sure you join our discord server to receive regular updates](https://discord.gg/Pf4cqxZtQu)'
               st.markdown(link, unsafe_allow_html=True)
 # def fun3(mail,event,)
-one,two,thr=st.columns([0.1,1, 0.1])
+one,two,thr=st.columns([0.2,1, 0.1])
 with two:
             st.header("Technotronz'23 Event Registration")
 # st.title("Technotronz'23 Event Registration")
