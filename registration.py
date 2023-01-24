@@ -5,7 +5,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 import smtplib
 import streamlit as st
 from PIL import Image
-
+from email.message import EmailMessage as EMsg
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 st.set_page_config(page_title="Technotronz'23 Event Registration",page_icon="Untitled design.png")
 hide_ststyle = """
@@ -90,7 +90,28 @@ def fun3():
 #             st.write(f'''<a target="_self" href="https://discord.gg/WgEDCtPN" target="_blank"><button>Click to join Technotronz'23 Discord server to follow regular updates</button></a>''',unsafe_allow_html=True)
               link = '[Make sure you join our discord server to receive regular updates](https://discord.gg/Pf4cqxZtQu)'
               st.markdown(link, unsafe_allow_html=True)
+# mail_amb(reg,name,data[i][3],ch)
+server=smtplib.SMTP_SSL("smtp.gmail.com",465)
+message = EMsg()
+password="A1.2.3.4.5.6"
+from_="21i252@psgtech.ac.in"
+message["from"]=from_
+def mail_amb(id,name,mail,ch):
+    message['subject'] = "Complete your payment for Techverse workshop confirmation of TZ'23!"
+    message['to'] = mail
+    if ch=="Campus Ambassador":
+        # html_=open("Technotronz (tech student).html").read()
+        # env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
+        # template = env.get_template("Technotronz (tech student).html")
+        # html = template.render(name=name,id=id)
+        html_=open("Technotronz (campus ambassador).html").read()
+        message.add_alternative(html_,subtype='html')
+        with smtplib.SMTP_SSL('smtp.gmail.com',465) as smtp:
+            smtp.login(from_,password)
+            smtp.send_message(message)
+
 # def fun3(mail,event,)
+CAIDS = ['CA_123','CA_124']
 one,two,thr=st.columns([0.2,1, 0.1])
 with two:
             st.header("Technotronz'23 Event Registration")
@@ -320,6 +341,8 @@ elif event=="Techverse - Workshop":
             d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
+                if adm.upper().strip() in CAIDS:
+                    #CAIDS = [ 'CA_123', 'CA_124']
                     creds7 = ServiceAccountCredentials.from_json_keyfile_name("final7.json", scope)
                     client7 = gspread.authorize(creds7)
                     sheet7 = client7.open("Workshop").sheet1
@@ -333,6 +356,7 @@ elif event=="Techverse - Workshop":
 #                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                     st.success("You will receive a mail within 24 hours regarding payment procedure! Check it out to complete your registration.")
 #                                     fun3()
+                                    mail_amb(reg,name,data[i][3],ch)
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     # fun3(data[i][3],event,data[i][1],ch)
                                     break
@@ -344,6 +368,8 @@ elif event=="Techverse - Workshop":
                                 break
                     else:
                         st.error("Invalid Register ID.")
+                else:
+                    st.error("Invalid campus ambassador ID.")
             else:
                     st.error("Invalid Register ID.")
     if ch=="PSG Tech Student":
