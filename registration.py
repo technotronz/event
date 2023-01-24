@@ -126,7 +126,7 @@ if event=="Techrival":
                     for i in range(1,len(data)):
                         if(data[i][0]==reg):
                             print(2)
-                            if(data[i][1]==name):
+                            if(name != " "):
                                 if data[i][6]==ph:
                                     sheet2.insert_row([reg,name,ph,data[i][3]],len(data2)+1)
                                     st.success("Successfully registered to the Techrival! (Email is sent to registered Mail ID)")
@@ -163,7 +163,7 @@ elif event=="Hacklite":
                     for i in range(1,len(data)):
                         if(data[i][0]==reg):
                             print(2)
-                            if(data[i][1]==name):
+                            if(name != " "):
                                 if data[i][6]==ph:
                                     sheet4.insert_row([reg,name,ph,data[i][3]],len(data4)+1)
                                     st.success("Successfully registered to the Hacklite! (Email is sent to registered Mail ID)")
@@ -202,7 +202,7 @@ elif event=="Tactile Arena":
                     for i in range(1,len(data)):
                         if(data[i][0]==reg):
                             print(2)
-                            if(data[i][1]==name):
+                            if(name != " "):
                                 if data[i][6]==ph:
                                     sheet5.insert_row([reg,name,ph,data[i][3]],len(data5)+1)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
@@ -243,12 +243,12 @@ elif event=="Tactile Arena":
                     for i in range(1,len(data)):
                         if(data[i][0]==reg1):
                             print(2)
-                            if(data[i][1]==name1):
+                            if(name1 != " "):
                                 if data[i][6]==ph1:
                                     for j in range(1,len(data)):
                                         if(data[j][0]==reg2):
                                             print(2)
-                                            if(data[j][1]==name2):
+                                            if(name2 != " "):
                                                 if data[j][6]==ph2:
                                                     sheet5.insert_row([reg1,name1,ph1,data[i][3],"2nd Part.",reg2,name2,ph2,data[j][3]],len(data5)+1)
                                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
@@ -292,7 +292,7 @@ elif event=="triNiFTy":
                     for i in range(1,len(data)):
                         if(data[i][0]==reg):
                             print(2)
-                            if(data[i][1]==name):
+                            if(name != " "):
                                 if data[i][6]==ph:
                                     sheet6.insert_row([reg,name,ph,data[i][3]],len(data6)+1)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
@@ -332,7 +332,7 @@ elif event=="Techverse - Workshop":
                     for i in range(1,len(data)):
                         if(data[i][0]==reg):
                             print(2)
-                            if(data[i][1]==name):
+                            if(name != " "):
                                 if data[i][6]==ph:
                                     sheet7.insert_row([reg,name,ph,data[i][3],ch,adm],len(data7)+1)
 #                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
@@ -373,7 +373,7 @@ elif event=="Techverse - Workshop":
                     for i in range(1,len(data)):
                         if(data[i][0]==reg):
                             print(2)
-                            if(data[i][1]==name):
+                            if(name != " "):
                                 if data[i][6]==ph:
                                     sheet7.insert_row([reg,name,ph,data[i][3],ch,rollno],len(data7)+1)
 #                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
@@ -413,7 +413,7 @@ elif event=="Techverse - Workshop":
                     for i in range(1,len(data)):
                         if(data[i][0]==reg):
                             print(2)
-                            if(data[i][1]==name):
+                            if(name != " "):
                                 if data[i][6]==ph:
                                     sheet7.insert_row([reg,name,ph,data[i][3],ch,rollno],len(data7)+1)
 #                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
@@ -453,7 +453,7 @@ elif event=="Techverse - Workshop":
                     for i in range(1,len(data)):
                         if(data[i][0]==reg):
                             print(2)
-                            if(data[i][1]==name):
+                            if(name != " "):
                                 if data[i][6]==ph:
                                     sheet7.insert_row([reg,name,ph,data[i][3],ch,sf],len(data7)+1)
 #                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
@@ -525,7 +525,7 @@ elif event=="Generic - Run":
                     for i in range(1,len(data)):
                         if(data[i][0]==reg):
                             print(2)
-                            if(data[i][1]==name):
+                            if(name != " "):
                                 if data[i][6]==ph:
                                     sheet8.insert_row([reg,name,ph,data[i][3]],len(data8)+1)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
@@ -566,12 +566,12 @@ elif event=="Generic - Run":
                 for i in range(1,len(data)):
                     if(data[i][0]==reg1):
                         print(2)
-                        if(data[i][1]==name1):
+                        if(name1 != " "):
                             if data[i][6]==ph1:
                                 for j in range(1,len(data)):
                                     if(data[j][0]==reg2):
                                         print(2)
-                                        if(data[j][1]==name2):
+                                        if(name2 != " "):
                                             if data[j][6]==ph2:
                                                 sheet8.insert_row([reg1,name1,ph1,data[i][3],"2nd Part.",reg2,name2,ph2,data[i][3]],len(data8)+1)
                                                 st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
