@@ -62,7 +62,7 @@ div.stButton > button:first-child {
 </style>""", unsafe_allow_html=True)
 # with col2:
 #             d=st.button("Submit")
-link="https://discord.gg/C6qpa97T"
+link="https://discord.gg/Pf4cqxZtQu"
 def fun(mail,event,reg):
     server=smtplib.SMTP_SSL("smtp.gmail.com",465)
     server.login("21i252@psgtech.ac.in","A1.2.3.4.5.6")
@@ -83,7 +83,9 @@ def fun2(mail1,event,reg1,mail2,reg2):
     server.sendmail("21i252@psgtech.ac.in",mail2,message)
     server.quit()
 def fun3():
-            st.write(f'''<a target="_self" href="https://discord.gg/WgEDCtPN" target="_blank"><button>Click to join Technotronz'23 Discord server to follow regular updates</button></a>''',unsafe_allow_html=True)
+#             st.write(f'''<a target="_self" href="https://discord.gg/WgEDCtPN" target="_blank"><button>Click to join Technotronz'23 Discord server to follow regular updates</button></a>''',unsafe_allow_html=True)
+              link = '[Make sure you join our discord server to receive regular updates](https://discord.gg/Pf4cqxZtQu)'
+              st.markdown(link, unsafe_allow_html=True)
 # def fun3(mail,event,)
 st.title("Technotronz'23 Event Registration")
 event=st.selectbox("Select the event: ",options=["--Choose--","Techrival","Hacklite","Tactile Arena", "triNiFTy","Techverse - Workshop", "Generic - Run"],index=0)
