@@ -19,9 +19,9 @@ st.markdown(hide_ststyle, unsafe_allow_html=True)
 img = Image.open('TZ_logo2.png')
 st.image(img)
 
-creds = ServiceAccountCredentials.from_json_keyfile_name("final.json", scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
 client = gspread.authorize(creds)
-sheet = client.open("registration").sheet1
+sheet = client.open("Registration").sheet1
 data=sheet.get_all_values()
 
 # creds2 = ServiceAccountCredentials.from_json_keyfile_name("final2.json", scope)
