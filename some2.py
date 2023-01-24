@@ -82,7 +82,7 @@ def fun2(mail1,event,reg1,mail2,reg2):
     message='Subject: {}\n\n{}'.format("Registered in "+event, text)
     server.sendmail("21i252@psgtech.ac.in",mail2,message)
     server.quit()
-st.title("Technotronz '23 Event Registration")
+st.title("Technotronz'23 Event Registration")
 event=st.selectbox("Select the event: ",options=["--Choose--","Techrival","Hacklite","Tactile Arena", "triNiFTy","Workshop", "Generic - Run"],index=0)
 # p=st.selectbox("Selelct the number of participants: ",options=["--Choose--","One","Two"])
 # if p=="One":
