@@ -91,24 +91,6 @@ def fun3():
               link = '[Make sure you join our discord server to receive regular updates](https://discord.gg/Pf4cqxZtQu)'
               st.markdown(link, unsafe_allow_html=True)
 # mail_amb(reg,name,data[i][3],ch)
-server=smtplib.SMTP_SSL("smtp.gmail.com",465)
-message = EMsg()
-password="A1.2.3.4.5.6"
-from_="21i252@psgtech.ac.in"
-message["from"]=from_
-def mail_amb(id,name,mail,ch):
-    message['subject'] = "Complete your payment for Techverse workshop confirmation of TZ'23!"
-    message['to'] = mail
-    if ch=="Campus Ambassador":
-        # html_=open("Technotronz (tech student).html").read()
-        # env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
-        # template = env.get_template("Technotronz (tech student).html")
-        # html = template.render(name=name,id=id)
-        html_=open("Technotronz (campus ambassador).html").read()
-        message.add_alternative(html_,subtype='html')
-        with smtplib.SMTP_SSL('smtp.gmail.com',465) as smtp:
-            smtp.login(from_,password)
-            smtp.send_message(message)
 
 # def fun3(mail,event,)
 CAIDS = ['CA_123','CA_124']
@@ -136,7 +118,7 @@ if event=="Techrival":
             d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
-                    creds2 = ServiceAccountCredentials.from_json_keyfile_name("final2.json", scope)
+                    creds2 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
                     client2 = gspread.authorize(creds2)
                     sheet2 = client2.open("Techrival").sheet1
                     data2=sheet2.get_all_values()
@@ -152,7 +134,7 @@ if event=="Techrival":
 #                                     c1,c2,c3,c4=st.columns([1,1,1,1])
 #                                     with c2:
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
-                                    fun(data[i][3],"Techrival",data[i][1])
+#                                     fun(data[i][3],"Techrival",data[i][1])
                                     break
                                 else:
                                     st.error("Invalid Register Contact Number")
@@ -174,7 +156,7 @@ elif event=="Hacklite":
             d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
-                    creds4 = ServiceAccountCredentials.from_json_keyfile_name("final4.json", scope)
+                    creds4 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
                     client4 = gspread.authorize(creds4)
                     sheet4 = client4.open("Hacklite").sheet1
                     data4=sheet4.get_all_values()
@@ -186,7 +168,7 @@ elif event=="Hacklite":
                                     sheet4.insert_row([reg,name,ph,data[i][3]],len(data4)+1)
                                     st.success("Successfully registered to the Hacklite! (Email is sent to registered Mail ID)")
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
-                                    fun(data[i][3],"Hacklite",data[i][1])
+#                                     fun(data[i][3],"Hacklite",data[i][1])
                                     fun3()
 #                                     link = '[Make sure you join our discord server to receive regular updates](https://discord.gg/Pf4cqxZtQu)'
 #                                     st.markdown(link, unsafe_allow_html=True)
@@ -213,9 +195,9 @@ elif event=="Tactile Arena":
             d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
-                    creds5 = ServiceAccountCredentials.from_json_keyfile_name("final5.json", scope)
+                    creds5 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
                     client5 = gspread.authorize(creds5)
-                    sheet5 = client5.open("Tacktile Arena").sheet1
+                    sheet5 = client5.open("Tactile Arena").sheet1
                     data5=sheet5.get_all_values()
                     for i in range(1,len(data)):
                         if(data[i][0]==reg):
@@ -225,7 +207,7 @@ elif event=="Tactile Arena":
                                     sheet5.insert_row([reg,name,ph,data[i][3]],len(data5)+1)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
-                                    fun(data[i][3],event,data[i][1])
+#                                     fun(data[i][3],event,data[i][1])
                                     fun3()
                                     break
                                 else:
@@ -254,7 +236,7 @@ elif event=="Tactile Arena":
             d=st.button("Submit")
         if d:
             if reg1[:4] =="TZ23":
-                    creds5 = ServiceAccountCredentials.from_json_keyfile_name("final5.json", scope)
+                    creds5 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
                     client5 = gspread.authorize(creds5)
                     sheet5 = client5.open("Tacktile Arena").sheet1
                     data5=sheet5.get_all_values()
@@ -271,7 +253,7 @@ elif event=="Tactile Arena":
                                                     sheet5.insert_row([reg1,name1,ph1,data[i][3],"2nd Part.",reg2,name2,ph2,data[j][3]],len(data5)+1)
                                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
-                                                    fun2(data[i][3],event,data[i][1],data[j][3],data[j][1])
+#                                                     fun2(data[i][3],event,data[i][1],data[j][3],data[j][1])
                                                     fun3()
                                                     break
                                                 else:
@@ -303,9 +285,9 @@ elif event=="triNiFTy":
             d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
-                    creds6 = ServiceAccountCredentials.from_json_keyfile_name("final6.json", scope)
+                    creds6 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
                     client6 = gspread.authorize(creds6)
-                    sheet6 = client6.open("Trinifty").sheet1
+                    sheet6 = client6.open("trinifty").sheet1
                     data6=sheet6.get_all_values()
                     for i in range(1,len(data)):
                         if(data[i][0]==reg):
@@ -315,7 +297,7 @@ elif event=="triNiFTy":
                                     sheet6.insert_row([reg,name,ph,data[i][3]],len(data6)+1)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
-                                    fun(data[i][3],event,data[i][1])
+#                                     fun(data[i][3],event,data[i][1])
                                     fun3()
                                     break
                                 else:
@@ -343,7 +325,7 @@ elif event=="Techverse - Workshop":
             if reg[:4] =="TZ23":
                 if adm.upper().strip() in CAIDS:
                     #CAIDS = [ 'CA_123', 'CA_124']
-                    creds7 = ServiceAccountCredentials.from_json_keyfile_name("final7.json", scope)
+                    creds7 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
                     client7 = gspread.authorize(creds7)
                     sheet7 = client7.open("Workshop").sheet1
                     data7=sheet7.get_all_values()
@@ -356,7 +338,7 @@ elif event=="Techverse - Workshop":
 #                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                     st.success("You will receive a mail within 24 hours regarding payment procedure! Check it out to complete your registration.")
 #                                     fun3()
-                                    mail_amb(reg,name,data[i][3],ch)
+#                                     mail_amb(reg,name,data[i][3],ch)
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     # fun3(data[i][3],event,data[i][1],ch)
                                     break
@@ -384,7 +366,7 @@ elif event=="Techverse - Workshop":
             d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
-                    creds7 = ServiceAccountCredentials.from_json_keyfile_name("final7.json", scope)
+                    creds7 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
                     client7 = gspread.authorize(creds7)
                     sheet7 = client7.open("Workshop").sheet1
                     data7=sheet7.get_all_values()
@@ -398,7 +380,7 @@ elif event=="Techverse - Workshop":
                                     st.success("You will receive a mail within 24 hours regarding payment procedure! Check it out to complete your registration.")
 
 #                                     st.write("Check out mail regarding payment details and stay tuned for further updates!")
-                                    fun3()
+#                                     fun3()
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     # fun3(data[i][3],event,data[i][1],ch)
                                     break
@@ -424,7 +406,7 @@ elif event=="Techverse - Workshop":
             d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
-                    creds7 = ServiceAccountCredentials.from_json_keyfile_name("final7.json", scope)
+                    creds7 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
                     client7 = gspread.authorize(creds7)
                     sheet7 = client7.open("Workshop").sheet1
                     data7=sheet7.get_all_values()
@@ -438,7 +420,7 @@ elif event=="Techverse - Workshop":
 #                                     st.write("Check out mail regarding payment details and stay tuned for further updates!")
                                     st.success("You will receive a mail within 24 hours regarding payment procedure! Check it out to complete your registration.")
 
-                                    fun3()
+#                                     fun3()
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     # fun3(data[i][3],event,data[i][1],ch)
                                     break
@@ -464,7 +446,7 @@ elif event=="Techverse - Workshop":
             d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
-                    creds7 = ServiceAccountCredentials.from_json_keyfile_name("final7.json", scope)
+                    creds7 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
                     client7 = gspread.authorize(creds7)
                     sheet7 = client7.open("Workshop").sheet1
                     data7=sheet7.get_all_values()
@@ -477,7 +459,7 @@ elif event=="Techverse - Workshop":
 #                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                     st.success("You will receive a mail within 24 hours regarding payment procedure! Check it out to complete your registration.")
                                 
-                                    fun3()
+#                                     fun3()
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     # fun3(data[i][3],event,data[i][1],ch)
                                     break
@@ -536,7 +518,7 @@ elif event=="Generic - Run":
             d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
-                    creds8 = ServiceAccountCredentials.from_json_keyfile_name("final8.json", scope)
+                    creds8 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
                     client8 = gspread.authorize(creds8)
                     sheet8 = client8.open("Generic run").sheet1
                     data8=sheet8.get_all_values()
@@ -549,7 +531,7 @@ elif event=="Generic - Run":
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                     fun3()
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
-                                    fun(data[i][3],event,data[i][1])
+#                                     fun(data[i][3],event,data[i][1])
                                     break
                                 else:
                                     st.error("Invalid Register Contact Number")
@@ -577,7 +559,7 @@ elif event=="Generic - Run":
             d=st.button("Submit")
         if d:
             if reg1[:4] =="TZ23":
-                creds8 = ServiceAccountCredentials.from_json_keyfile_name("final8.json", scope)
+                creds8 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
                 client8 = gspread.authorize(creds8)
                 sheet8 = client8.open("Generic run").sheet1
                 data8=sheet8.get_all_values()
@@ -594,7 +576,7 @@ elif event=="Generic - Run":
                                                 sheet8.insert_row([reg1,name1,ph1,data[i][3],"2nd Part.",reg2,name2,ph2,data[i][3]],len(data8)+1)
                                                 st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                                 # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
-                                                fun2(data[i][3],event,data[i][1],data[j][3],data[j][1])
+#                                                 fun2(data[i][3],event,data[i][1],data[j][3],data[j][1])
                                                 fun3()
                                                 break
                                             else:
