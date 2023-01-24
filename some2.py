@@ -82,8 +82,9 @@ def fun2(mail1,event,reg1,mail2,reg2):
     message='Subject: {}\n\n{}'.format("Registered in "+event, text)
     server.sendmail("21i252@psgtech.ac.in",mail2,message)
     server.quit()
+# def fun3(mail,event,)
 st.title("Technotronz'23 Event Registration")
-event=st.selectbox("Select the event: ",options=["--Choose--","Techrival","Hacklite","Tactile Arena", "triNiFTy","Workshop", "Generic - Run"],index=0)
+event=st.selectbox("Select the event: ",options=["--Choose--","Techrival","Hacklite","Tactile Arena", "triNiFTy","Techverse - Workshop", "Generic - Run"],index=0)
 # p=st.selectbox("Selelct the number of participants: ",options=["--Choose--","One","Two"])
 # if p=="One":
 #         st.header("Fill in the appropriate registered details ⬇️")
@@ -115,7 +116,7 @@ if event=="Techrival":
                                     st.success("Successfully registered to the Techrival! (Email is sent to registered Mail ID)")
 #                                     c1,c2,c3,c4=st.columns([1,1,1,1])
 #                                     with c2:
-                                    st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     fun(data[i][3],"Techrival",data[i][1])
                                     break
                                 else:
@@ -149,7 +150,7 @@ elif event=="Hacklite":
                                 if data[i][6]==ph:
                                     sheet4.insert_row([reg,name,ph,data[i][3]],len(data4)+1)
                                     st.success("Successfully registered to the Hacklite! (Email is sent to registered Mail ID)")
-                                    st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     fun(data[i][3],"Hacklite",data[i][1])
                                     break
                                 else:
@@ -185,7 +186,7 @@ elif event=="Tactile Arena":
                                 if data[i][6]==ph:
                                     sheet5.insert_row([reg,name,ph,data[i][3]],len(data5)+1)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
-                                    st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     fun(data[i][3],event,data[i][1])
                                     break
                                 else:
@@ -230,7 +231,7 @@ elif event=="Tactile Arena":
                                                 if data[j][6]==ph2:
                                                     sheet5.insert_row([reg1,name1,ph1,data[i][3],"2nd Part.",reg2,name2,ph2,data[j][3]],len(data5)+1)
                                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
-                                                    st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+                                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                                     fun2(data[i][3],event,data[i][1],data[j][3],data[j][1])
                                                     break
                                                 else:
@@ -273,7 +274,7 @@ elif event=="triNiFTy":
                                 if data[i][6]==ph:
                                     sheet6.insert_row([reg,name,ph,data[i][3]],len(data6)+1)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
-                                    st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     fun(data[i][3],event,data[i][1])
                                     break
                                 else:
@@ -286,9 +287,12 @@ elif event=="triNiFTy":
                         st.error("Invalid Register ID.")
             else:
                 st.error("Invalid Register ID.")
-elif event=="Workshop":
+elif event=="Techverse - Workshop":
+    ch=st.selectbox("Click the credential: ",options=["--Choose--","Campus Ambassador","PSG Tech Student","IETE membership holder","None of the above"])
+    if ch=="Campus Ambassador":
         st.header("Fill in the appropriate details ⬇️")
         reg=st.text_input('Your register ID:')
+        adm=st.text_input('Your Campus ambassador ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
         col1,col2,col3=st.columns([2,1,2])
@@ -305,10 +309,11 @@ elif event=="Workshop":
                             print(2)
                             if(data[i][1]==name):
                                 if data[i][6]==ph:
-                                    sheet7.insert_row([reg,name,ph,data[i][3]],len(data7)+1)
+                                    sheet7.insert_row([reg,name,ph,data[i][3],ch,adm],len(data7)+1)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
-                                    st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
-                                    fun(data[i][3],event,data[i][1])
+                                    st.write("Check out mail regarding payment details and stay tuned for further updates!")
+                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+                                    # fun3(data[i][3],event,data[i][1],ch)
                                     break
                                 else:
                                     st.error("Invalid Register Contact Number")
@@ -319,7 +324,151 @@ elif event=="Workshop":
                     else:
                         st.error("Invalid Register ID.")
             else:
-                        st.error("Invalid Register ID.")        
+                    st.error("Invalid Register ID.")
+    if ch=="PSG Tech Student":
+        st.header("Fill in the appropriate details ⬇️")
+        reg=st.text_input('Your register ID:')
+        rollno=st.text_input('Your roll number: ')
+        # adm=st.text_input('Your Campus ambassador ID:')
+        name=st.text_input('Your name [Case sensitive]:')
+        ph=st.text_input('Your contact number:')
+        col1,col2,col3=st.columns([2,1,2])
+        with col2:
+            d=st.button("Submit")
+        if d:
+            if reg[:4] =="TZ23":
+                    creds7 = ServiceAccountCredentials.from_json_keyfile_name("final7.json", scope)
+                    client7 = gspread.authorize(creds7)
+                    sheet7 = client7.open("Workshop").sheet1
+                    data7=sheet7.get_all_values()
+                    for i in range(1,len(data)):
+                        if(data[i][0]==reg):
+                            print(2)
+                            if(data[i][1]==name):
+                                if data[i][6]==ph:
+                                    sheet7.insert_row([reg,name,ph,data[i][3],ch,rollno],len(data7)+1)
+                                    st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
+                                    st.write("Check out mail regarding payment details and stay tuned for further updates!")
+                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+                                    # fun3(data[i][3],event,data[i][1],ch)
+                                    break
+                                else:
+                                    st.error("Invalid Register Contact Number")
+                                    break    
+                            else:
+                                st.error("Invalid Register Name")
+                                break
+                    else:
+                        st.error("Invalid Register ID.")
+            else:
+                    st.error("Invalid Register ID.")
+    if ch=="None of the above":
+        st.header("Fill in the appropriate details ⬇️")
+        reg=st.text_input('Your register ID:')
+        rollno=st.text_input('Your roll number: ')
+        # adm=st.text_input('Your Campus ambassador ID:')
+        name=st.text_input('Your name [Case sensitive]:')
+        ph=st.text_input('Your contact number:')
+        col1,col2,col3=st.columns([2,1,2])
+        with col2:
+            d=st.button("Submit")
+        if d:
+            if reg[:4] =="TZ23":
+                    creds7 = ServiceAccountCredentials.from_json_keyfile_name("final7.json", scope)
+                    client7 = gspread.authorize(creds7)
+                    sheet7 = client7.open("Workshop").sheet1
+                    data7=sheet7.get_all_values()
+                    for i in range(1,len(data)):
+                        if(data[i][0]==reg):
+                            print(2)
+                            if(data[i][1]==name):
+                                if data[i][6]==ph:
+                                    sheet7.insert_row([reg,name,ph,data[i][3],ch,rollno],len(data7)+1)
+                                    st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
+                                    st.write("Check out mail regarding payment details and stay tuned for further updates!")
+                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+                                    # fun3(data[i][3],event,data[i][1],ch)
+                                    break
+                                else:
+                                    st.error("Invalid Register Contact Number")
+                                    break    
+                            else:
+                                st.error("Invalid Register Name")
+                                break
+                    else:
+                        st.error("Invalid Register ID.")
+            else:
+                    st.error("Invalid Register ID.")
+    if ch=="IETE membership holder":
+        st.header("Fill in the appropriate details ⬇️")
+        reg=st.text_input('Your register ID:')
+        # rollno=st.text_input('Your roll number: ')
+        sf=st.text_input('Your IETE SF membership number:')
+        name=st.text_input('Your name [Case sensitive]:')
+        ph=st.text_input('Your contact number:')
+        col1,col2,col3=st.columns([2,1,2])
+        with col2:
+            d=st.button("Submit")
+        if d:
+            if reg[:4] =="TZ23":
+                    creds7 = ServiceAccountCredentials.from_json_keyfile_name("final7.json", scope)
+                    client7 = gspread.authorize(creds7)
+                    sheet7 = client7.open("Workshop").sheet1
+                    data7=sheet7.get_all_values()
+                    for i in range(1,len(data)):
+                        if(data[i][0]==reg):
+                            print(2)
+                            if(data[i][1]==name):
+                                if data[i][6]==ph:
+                                    sheet7.insert_row([reg,name,ph,data[i][3],ch,sf],len(data7)+1)
+                                    st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
+                                    st.write("Check out mail regarding payment details and stay tuned for further updates!")
+                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+                                    # fun3(data[i][3],event,data[i][1],ch)
+                                    break
+                                else:
+                                    st.error("Invalid Register Contact Number")
+                                    break    
+                            else:
+                                st.error("Invalid Register Name")
+                                break
+                    else:
+                        st.error("Invalid Register ID.")
+            else:
+                    st.error("Invalid Register ID.")        
+        # st.header("Fill in the appropriate details ⬇️")
+        # reg=st.text_input('Your register ID:')
+        # name=st.text_input('Your name [Case sensitive]:')
+        # ph=st.text_input('Your contact number:')
+        # col1,col2,col3=st.columns([2,1,2])
+        # with col2:
+        #     d=st.button("Submit")
+        # if d:
+        #     if reg[:4] =="TZ23":
+        #             creds7 = ServiceAccountCredentials.from_json_keyfile_name("final7.json", scope)
+        #             client7 = gspread.authorize(creds7)
+        #             sheet7 = client7.open("Workshop").sheet1
+        #             data7=sheet7.get_all_values()
+        #             for i in range(1,len(data)):
+        #                 if(data[i][0]==reg):
+        #                     print(2)
+        #                     if(data[i][1]==name):
+        #                         if data[i][6]==ph:
+        #                             sheet7.insert_row([reg,name,ph,data[i][3]],len(data7)+1)
+        #                             st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
+        #                             # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+        #                             fun(data[i][3],event,data[i][1])
+        #                             break
+        #                         else:
+        #                             st.error("Invalid Register Contact Number")
+        #                             break    
+        #                     else:
+        #                         st.error("Invalid Register Name")
+        #                         break
+        #             else:
+        #                 st.error("Invalid Register ID.")
+        #     else:
+        #                 st.error("Invalid Register ID.")        
 elif event=="Generic - Run":
     p=st.selectbox("Selelct the number of participants: ",options=["--Choose--","One","Two"])
     if p=="One":
@@ -343,7 +492,7 @@ elif event=="Generic - Run":
                                 if data[i][6]==ph:
                                     sheet8.insert_row([reg,name,ph,data[i][3]],len(data8)+1)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
-                                    st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     fun(data[i][3],event,data[i][1])
                                     break
                                 else:
@@ -388,7 +537,7 @@ elif event=="Generic - Run":
                                             if data[j][6]==ph2:
                                                 sheet8.insert_row([reg1,name1,ph1,data[i][3],"2nd Part.",reg2,name2,ph2,data[i][3]],len(data8)+1)
                                                 st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
-                                                st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+                                                # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                                 fun2(data[i][3],event,data[i][1],data[j][3],data[j][1])
                                                 break
                                             else:
