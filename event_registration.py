@@ -157,7 +157,9 @@ elif event=="Hacklite":
                                     st.success("Successfully registered to the Hacklite! (Email is sent to registered Mail ID)")
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     fun(data[i][3],"Hacklite",data[i][1])
-                                    fun3()
+#                                     fun3()
+                                    link = '[Make sure you join our discord server to receive regular updates](https://discord.gg/Pf4cqxZtQu)'
+                                    st.markdown(link, unsafe_allow_html=True)
                                     break
                                 else:
                                     st.error("Invalid Register Contact Number")
