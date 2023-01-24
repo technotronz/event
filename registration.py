@@ -107,7 +107,7 @@ event=st.selectbox("Select the event: ",options=["--Choose--","Techrival","Hackl
 #         if st.button("Submit"):
 if event=="Techrival":
         st.header("Fill in the appropriate details ⬇️")
-        reg=st.text_input('Your register ID:')
+        reg=st.text_input('Your registration ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
         col1,col2,col3=st.columns([2,1,2])
@@ -145,7 +145,7 @@ if event=="Techrival":
                     st.error("Invalid Register ID.")
 elif event=="Hacklite":
         st.header("Fill in the appropriate details ⬇️")
-        reg=st.text_input('Your register ID:')
+        reg=st.text_input('Your registration ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
         col1,col2,col3=st.columns([2,1,2])
@@ -184,7 +184,7 @@ elif event=="Tactile Arena":
     p=st.selectbox("Selelct the number of participants: ",options=["--Choose--","One","Two"])
     if p=="One":
         st.header("Fill in the appropriate details ⬇️")
-        reg=st.text_input('Your register ID:')
+        reg=st.text_input('Your registration ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
         col1,col2,col3=st.columns([2,1,2])
@@ -220,12 +220,12 @@ elif event=="Tactile Arena":
     elif p=="Two":
         st.header("Fill in the appropriate details ⬇️")
         st.header("Participant 1: ")
-        reg1=st.text_input('Register ID of participant 1:')
+        reg1=st.text_input('Registration ID of participant 1:')
         name1=st.text_input('Name of participant 1: [Case sensitive]')
         ph1=st.text_input('Contact number of participant 1:')
 
         st.header("Participant 2: ")
-        reg2=st.text_input('Register ID of participant 2:')
+        reg2=st.text_input('Registration ID of participant 2:')
         name2=st.text_input('Name of participant 2: [Case sensitive]')
         ph2=st.text_input('Contact number of participant 2:')
         col1,col2,col3=st.columns([2,1,2])
@@ -274,7 +274,7 @@ elif event=="Tactile Arena":
 
 elif event=="triNiFTy":
         st.header("Fill in the appropriate details ⬇️")
-        reg=st.text_input('Your register ID:')
+        reg=st.text_input('Your registration ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
         col1,col2,col3=st.columns([2,1,2])
@@ -311,8 +311,8 @@ elif event=="Techverse - Workshop":
     ch=st.selectbox("Click the credential: ",options=["--Choose--","Campus Ambassador","PSG Tech Student","IETE membership holder","None of the above"])
     if ch=="Campus Ambassador":
         st.header("Fill in the appropriate details ⬇️")
-        reg=st.text_input('Your register ID:')
-        adm=st.text_input('Your Campus ambassador ID:')
+        reg=st.text_input('Your registration ID:')
+        adm=st.text_input('Your campus ambassador ID:')
         name=st.text_input('Your name [Case sensitive]:')
         ph=st.text_input('Your contact number:')
         col1,col2,col3=st.columns([2,1,2])
@@ -332,7 +332,7 @@ elif event=="Techverse - Workshop":
                                     sheet7.insert_row([reg,name,ph,data[i][3],ch,adm],len(data7)+1)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                     st.write("Check out mail regarding payment details and stay tuned for further updates!")
-                                    fun3()
+#                                     fun3()
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
                                     # fun3(data[i][3],event,data[i][1],ch)
                                     break
