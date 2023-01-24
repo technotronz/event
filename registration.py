@@ -98,7 +98,7 @@ one,two,thr=st.columns([0.2,1, 0.1])
 with two:
             st.header("Technotronz'23 Event Registration")
 # st.title("Technotronz'23 Event Registration")
-note_er = 'Note: If you have not completed the general registration, **[click here](https://technotronz-general-registration-tkl0ww.streamlit.app/)** to register and get your registration ID.'
+note_er = 'Note: If you have not completed the general registration, **[click here](https://technotronz-general--registration-3uwxjx.streamlit.app/)** to register and get your registration ID.'
 st.markdown(note_er, unsafe_allow_html=True)
 event=st.selectbox("Select the event: ",options=["--Choose--","Techrival","Hacklite","Tactile Arena", "Techverse - Workshop","triNiFTy", "Generic - Run"],index=0)
 # p=st.selectbox("Selelct the number of participants: ",options=["--Choose--","One","Two"])
