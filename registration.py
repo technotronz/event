@@ -3602,10 +3602,10 @@ div.stButton > button:first-child {
 link="https://discord.gg/Pf4cqxZtQu"
 FROM = "technotronz23@gmail.com"
 password="qsfcotxmimrdiogr"
-def em2(id,name,date,event,html_):
+def em2(id,name,mail,date,event,html_):
 	message = EMsg()
 	message['subject'] = f"Successfully registered in {event} of TZ'23"
-	message['to'] = id
+	message['to'] = to
 	message['from']=FROM
 	html_=html_.replace("[technocrats]",name)
 	html_=html_.replace("[TZ23III]",id)
@@ -3669,7 +3669,7 @@ if event=="Techrival":
                                 if data[i][6]==ph:
                                     sheet2.insert_row([reg,name,ph,data[i][3]],len(data2)+1)
 #                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
-                                    em2(reg,name,"1 February,2023",event,html_er)
+                                    em2(reg,name,data[i][3],"1 February,2023",event,html_er)
                                     st.success("Successfully registered to the Techrival! (Email is sent to registered Mail ID)")
                                     fun3()
 #                                     c1,c2,c3,c4=st.columns([1,1,1,1])
