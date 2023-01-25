@@ -4621,7 +4621,7 @@ elif event=="Tactile Arena":
             if reg[:4] =="TZ23":
                     creds5 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
                     client5 = gspread.authorize(creds5)
-                    sheet5 = client5.open("Tactile Arena").sheet1
+                    sheet5 = client5.open("Tacktile Arena").sheet1
                     data5=sheet5.get_all_values()
                     for i in range(1,len(data)):
                         if(data[i][0]==reg):
@@ -4965,7 +4965,7 @@ elif event=="Generic - Run":
                                 if data[i][6]==ph:
                                     sheet8.insert_row([reg,name,ph,data[i][3]],len(data8)+1)
 #                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
-                                    em2(reg,name,"February 6,2023",event,html_er)
+                                    em2(reg,name,data[i][3],"February 6,2023",event,html_er)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                     fun3()
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
@@ -5014,8 +5014,8 @@ elif event=="Generic - Run":
                                                 sheet8.insert_row([reg1,name1,ph1,data[i][3],"2nd Part.",reg2,name2,ph2,data[i][3]],len(data8)+1)
 #                                                 em(reg1,name2,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
 #                                                 em(reg2,name2,data[j][3],html_wno,f"Successfully registered in {event} of TZ'23")
-                                                em2(reg1,name1,"February 6,2023",event,html_er)
-                                                em2(reg2,name2,"February 6,2023",event,html_er)
+                                                em2(reg1,name1,data[i][3],"February 6,2023",event,html_er)
+                                                em2(reg2,name2,data[j][3],"February 6,2023",event,html_er)
                                                 st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                                 # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
 #                                                 fun2(data[i][3],event,data[i][1],data[j][3],data[j][1])
