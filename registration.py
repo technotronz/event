@@ -4518,6 +4518,8 @@ with two:
 # st.title("Technotronz'23 Event Registration")
 note_er = 'Note: If you have not completed the general registration, **[click here](https://technotronz-general--registration-3uwxjx.streamlit.app/)** to register and get your registration ID.'
 st.markdown(note_er, unsafe_allow_html=True)
+dnote_er = 'Disclaimer: This form is supportable and accept responses only in latest version of the following browsers (Google Chrome, Microsoft Edge, Safari, Firefox)'
+st.markdown(dnote_er, unsafe_allow_html=True)
 event=st.selectbox("Select the event: ",options=["--Choose--","Techrival","Hacklite","Tactile Arena", "Techverse - Workshop","triNiFTy", "Generic - Run"],index=0)
 # p=st.selectbox("Selelct the number of participants: ",options=["--Choose--","One","Two"])
 # if p=="One":
