@@ -3605,7 +3605,7 @@ password="qsfcotxmimrdiogr"
 def em2(id,name,mail,date,event,html_):
 	message = EMsg()
 	message['subject'] = f"Successfully registered in {event} of TZ'23"
-	message['to'] = to
+	message['to'] = mail
 	message['from']=FROM
 	html_=html_.replace("[technocrats]",name)
 	html_=html_.replace("[TZ23III]",id)
