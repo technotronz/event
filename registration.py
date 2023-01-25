@@ -3579,7 +3579,7 @@ html_er='''
 <p style="text-align: center;">Thank you for registering for <em><strong>[EVENT_]</strong></em></p>
 <p style="text-align: center;">Your registration is now complete and we look forward to seeing you at the event.</p>
 <p style="text-align: center;">Please save the following details for your reference:</p>
-<p style="text-align: center;"><strong>Event Name:</strong> [EVENT]<br /><strong>Event Date :</strong> [DATE]</p>
+<p style="text-align: center;"><strong>Event Name:</strong> [EVENT_]<br /><strong>Event Date :</strong> [DATE]</p>
 <p style="text-align: center;">Make sure you join our discord server to receive regular updates:&nbsp;<a href="https://discord.gg/Pf4cqxZtQu" target="_blank" rel="noopener noreferrer" data-saferedirecturl="https://www.google.com/url?q=https://discord.gg/Pf4cqxZtQu&amp;source=gmail&amp;ust=1674703013148000&amp;usg=AOvVaw2aG3SCdDcaJ-5I_mwZxI0n">https://discord.gg/Pf4cqxZtQu</a></p>
 <p style="text-align: center;">We are excited for you to join us and look forward to seeing you at the event! Please feel free to revisit our website again, to further register for participating in other events as well!</p>
 <p style="text-align: center;">If you have any questions or need to make changes to your registration,&nbsp;please contact us at</p>
