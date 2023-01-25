@@ -4769,7 +4769,7 @@ elif event=="Techverse - Workshop":
                                     sheet7.insert_row([reg,name,ph,data[i][3],ch,adm],len(data7)+1)
                                     em(reg,name,data[i][3],html_wca,"Complete your payment for Techverse workshop confirmation of TZ'23!")
 #                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
-                                    st.success("You will receive a mail within 24 hours regarding payment procedure! Check it out to complete your registration.")
+                                    st.success("A mail regarding payment procedure will be sent within 24 hrs. Check it out to complete your registration.")
 #                                     fun3()
 #                                     mail_amb(reg,name,data[i][3],ch)
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
@@ -4811,7 +4811,7 @@ elif event=="Techverse - Workshop":
                                     sheet7.insert_row([reg,name,ph,data[i][3],ch,rollno],len(data7)+1)
                                     em(reg,name,data[i][3],html_wpsg,"Complete your payment for Techverse workshop confirmation of TZ'23!")
 #                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
-                                    st.success("You will receive a mail within 24 hours regarding payment procedure! Check it out to complete your registration.")
+                                    st.success("A mail regarding payment procedure will be sent within 24 hrs. Check it out to complete your registration.")
 
 #                                     st.write("Check out mail regarding payment details and stay tuned for further updates!")
 #                                     fun3()
@@ -4853,7 +4853,7 @@ elif event=="Techverse - Workshop":
                                     em(reg,name,data[i][3],html_wno,"Complete your payment for Techverse workshop confirmation of TZ'23!")
 #                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
 #                                     st.write("Check out mail regarding payment details and stay tuned for further updates!")
-                                    st.success("You will receive a mail within 24 hours regarding payment procedure! Check it out to complete your registration.")
+                                    st.success("A mail regarding payment procedure will be sent within 24 hrs. Check it out to complete your registration.")
 
 #                                     fun3()
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
@@ -4893,7 +4893,7 @@ elif event=="Techverse - Workshop":
                                     sheet7.insert_row([reg,name,ph,data[i][3],ch,sf],len(data7)+1)
                                     em(reg,name,data[i][3],html_wiete,"Complete your payment for Techverse workshop confirmation of TZ'23!")
 #                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
-                                    st.success("You will receive a mail within 24 hours regarding payment procedure! Check it out to complete your registration.")
+                                    st.success("A mail regarding payment procedure will be sent within 24 hrs. Check it out to complete your registration.")
                                 
 #                                     fun3()
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
