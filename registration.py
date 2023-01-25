@@ -3574,6 +3574,19 @@ html_wpsg = '''<!doctype html>
 # sheet8 = client8.open("Generic run").sheet1
 # data8=sheet8.get_all_values()
 # col1,col2,col3=st.columns([2,1,2])
+html_er='''
+<p style="text-align: center;">Hello [technocrats] ([TZ23III])</p>
+<p style="text-align: center;">Thank you for registering for <em><strong>[EVENT_]</strong></em></p>
+<p style="text-align: center;">Your registration is now complete and we look forward to seeing you at the event.</p>
+<p style="text-align: center;">Please save the following details for your reference:</p>
+<p style="text-align: center;"><strong>Event Name:</strong> [EVENT]<br /><strong>Event Date :</strong> [DATE]</p>
+<p style="text-align: center;">Make sure you join our discord server to receive regular updates:&nbsp;<a href="https://discord.gg/Pf4cqxZtQu" target="_blank" rel="noopener noreferrer" data-saferedirecturl="https://www.google.com/url?q=https://discord.gg/Pf4cqxZtQu&amp;source=gmail&amp;ust=1674703013148000&amp;usg=AOvVaw2aG3SCdDcaJ-5I_mwZxI0n">https://discord.gg/Pf4cqxZtQu</a></p>
+<p style="text-align: center;">We are excited for you to join us and look forward to seeing you at the event! Please feel free to revisit our website again, to further register for participating in other events as well!</p>
+<p style="text-align: center;">If you have any questions or need to make changes to your registration,&nbsp;please contact us at</p>
+<p style="text-align: center;">Sree<br />+91 95976 78840</p>
+<p style="text-align: center;">Madhumathi<br />+91 73730 08810</p>
+<p style="text-align: left;">With love <br />Team Techotronz'23</p>
+'''
 m = st.markdown("""
 <style>
 div.stButton > button:first-child {
@@ -3589,6 +3602,19 @@ div.stButton > button:first-child {
 link="https://discord.gg/Pf4cqxZtQu"
 FROM = "technotronz23@gmail.com"
 password="qsfcotxmimrdiogr"
+def em2(id,name,date,event,html_):
+	message = EMsg()
+	message['subject'] = f"Successfully registered in {event} of TZ'23"
+	message['to'] = id
+	message['from']=FROM
+	html_=html_.replace("[technocrats]",name)
+	html_=html_.replace("[TZ23III]",id)
+	html_=html_.replace("[EVENT_]",event)
+	html_=html_.replace("[DATE]",date)
+	message.add_alternative(html_,subtype='html')
+	with smtplib.SMTP_SSL('smtp.gmail.com',465) as smtp:
+		smtp.login(FROM,password)
+		smtp.send_message(message)
 def em(id,name,to,html_,subject):
     message = EMsg()
     message['subject'] = subject
@@ -3642,7 +3668,8 @@ if event=="Techrival":
                             if(name != " "):
                                 if data[i][6]==ph:
                                     sheet2.insert_row([reg,name,ph,data[i][3]],len(data2)+1)
-                                    em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
+#                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
+				    em2(reg,name,"1 February,2023",event,html_er)
                                     st.success("Successfully registered to the Techrival! (Email is sent to registered Mail ID)")
                                     fun3()
 #                                     c1,c2,c3,c4=st.columns([1,1,1,1])
