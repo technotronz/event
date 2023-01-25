@@ -4589,7 +4589,7 @@ elif event=="Hacklite":
                                 if data[i][6]==ph:
                                     sheet4.insert_row([reg,name,ph,data[i][3]],len(data4)+1)
 #                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
-                                    em2(reg,name,"February 2,2023",event,html_er)
+                                    em2(reg,name,data[i][3],"February 2,2023",event,html_er)
                                     st.success("Successfully registered to the Hacklite! (Email is sent to registered Mail ID)")
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
 #                                     fun(data[i][3],"Hacklite",data[i][1])
@@ -4630,7 +4630,7 @@ elif event=="Tactile Arena":
                                 if data[i][6]==ph:
                                     sheet5.insert_row([reg,name,ph,data[i][3]],len(data5)+1)
 #                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
-                                    em2(reg,name,"February 3,2023",event,html_er)
+                                    em2(reg,name,data[i][3],"February 3,2023",event,html_er)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
 #                                     fun(data[i][3],event,data[i][1])
@@ -4679,8 +4679,8 @@ elif event=="Tactile Arena":
                                                     sheet5.insert_row([reg1,name1,ph1,data[i][3],"2nd Part.",reg2,name2,ph2,data[j][3]],len(data5)+1)
 #                                                     em(reg1,name1,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
 #                                                     em(reg2,name2,data[j][3],html_wno,f"Successfully registered in {event} of TZ'23")
-                                                    em2(reg1,name1,"February 3,2023",event,html_er)
-                                                    em2(reg2,name2,"February 3,2023",event,html_er)  
+                                                    em2(reg1,name1,data[i][3],"February 3,2023",event,html_er)
+                                                    em2(reg2,name2,data[j][3],"February 3,2023",event,html_er)  
                                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
 #                                                     fun2(data[i][3],event,data[i][1],data[j][3],data[j][1])
@@ -4726,7 +4726,7 @@ elif event=="triNiFTy":
                                 if data[i][6]==ph:
                                     sheet6.insert_row([reg,name,ph,data[i][3]],len(data6)+1)
 #                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
-                                    em2(reg,name,"February 4 & 5,2023",event,html_er)
+                                    em2(reg,name,data[i][3],"February 4 & 5,2023",event,html_er)
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
 #                                     fun(data[i][3],event,data[i][1])
