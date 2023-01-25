@@ -4678,7 +4678,7 @@ elif event=="Tactile Arena":
 #                                                     em(reg1,name1,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
 #                                                     em(reg2,name2,data[j][3],html_wno,f"Successfully registered in {event} of TZ'23")
                                                     em2(reg1,name1,"February 3,2023",event,html_er)
-	                                            em2(reg2,name2,"February 3,2023",event,html_er)  
+                                                    em2(reg2,name2,"February 3,2023",event,html_er)  
                                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
 #                                                     fun2(data[i][3],event,data[i][1],data[j][3],data[j][1])
