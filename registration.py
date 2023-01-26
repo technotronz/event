@@ -4508,12 +4508,12 @@ def fun3():
 #             st.write(f'''<a target="_self" href="https://discord.gg/WgEDCtPN" target="_blank"><button>Click to join Technotronz'23 Discord server to follow regular updates</button></a>''',unsafe_allow_html=True)
 #               link = '[Make sure you join our discord server to receive regular updates](https://discord.gg/Pf4cqxZtQu)'
 #               st.markdown(link, unsafe_allow_html=True)
-	        a2,b2,c2=st.columns([1,3,0.9])
-		a1,b1=st.columns([1.1,1.9])
-		with b2:
-			st.write('''<h5>Join us on our discord server for regular updates</h5>''',unsafe_allow_html=True)
-		with b1:
-			st.write('''
+    a2,b2,c2=st.columns([1,3,0.9])
+    a1,b1=st.columns([1.1,1.9])
+    with b2:
+      st.write('''<h5>Join us on our discord server for regular updates</h5>''',unsafe_allow_html=True)
+    with b1:
+      st.write('''
 				<style>
 				.button {
 				background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
@@ -4548,8 +4548,7 @@ def fun3():
 							</button>
 						</a>
 				''',
-				unsafe_allow_html=True
-			)
+				unsafe_allow_html=True)
 # mail_amb(reg,name,data[i][3],ch)
 
 # def fun3(mail,event,)
