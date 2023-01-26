@@ -4509,7 +4509,7 @@ def fun3():
 #               link = '[Make sure you join our discord server to receive regular updates](https://discord.gg/Pf4cqxZtQu)'
 #               st.markdown(link, unsafe_allow_html=True)
     a2,b2,c2=st.columns([1,3,0.9])
-    a1,b1=st.columns([1.1,1.9])
+    a1,b1=st.columns([1,1.9])
     with b2:
       st.write('''<h5>Join us on our discord server for regular updates</h5>''',unsafe_allow_html=True)
     with b1:
