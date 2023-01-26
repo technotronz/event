@@ -4506,8 +4506,50 @@ def em(id,name,to,html_,subject):
         smtp.send_message(message)
 def fun3():
 #             st.write(f'''<a target="_self" href="https://discord.gg/WgEDCtPN" target="_blank"><button>Click to join Technotronz'23 Discord server to follow regular updates</button></a>''',unsafe_allow_html=True)
-              link = '[Make sure you join our discord server to receive regular updates](https://discord.gg/Pf4cqxZtQu)'
-              st.markdown(link, unsafe_allow_html=True)
+#               link = '[Make sure you join our discord server to receive regular updates](https://discord.gg/Pf4cqxZtQu)'
+#               st.markdown(link, unsafe_allow_html=True)
+	        a2,b2,c2=st.columns([1,3,0.9])
+		a1,b1=st.columns([1.1,1.9])
+		with b2:
+			st.write('''<h5>Join us on our discord server for regular updates</h5>''',unsafe_allow_html=True)
+		with b1:
+			st.write('''
+				<style>
+				.button {
+				background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+				border: none;
+				color: white;
+				padding: 15px 30px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 3px 1px;
+				transition-duration: 0.4s;
+				cursor: pointer;
+				border-radius: 13px;
+				width: auto;
+				}
+
+				.button1 {
+				background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);; 
+				color: white; 
+				border: 2px solid #314755;
+				}
+				.button1:hover {
+				background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+
+				color: white;
+				}
+				</style>
+				<a  href="https://discord.gg/Pf4cqxZtQu" target="_blank" > 
+							<button class="button button1">
+								Discord Server
+							</button>
+						</a>
+				''',
+				unsafe_allow_html=True
+			)
 # mail_amb(reg,name,data[i][3],ch)
 
 # def fun3(mail,event,)
