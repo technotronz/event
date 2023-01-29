@@ -4581,8 +4581,8 @@ if event=="Techrival":
         with col2:
             d=st.button("Submit")
         if d:
-			sheet = client.open("Registration").sheet1
-			data=sheet.get_all_values()
+            sheet = client.open("Registration").sheet1
+            data=sheet.get_all_values()
             if reg[:4] =="TZ23":
                     creds2 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client2 = gspread.authorize(creds2)
@@ -4623,8 +4623,8 @@ elif event=="Hacklite":
         with col2:
             d=st.button("Submit")
         if d:
-			sheet = client.open("Registration").sheet1
-			data=sheet.get_all_values()
+            sheet = client.open("Registration").sheet1
+            data=sheet.get_all_values()
             if reg[:4] =="TZ23":
                     creds4 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client4 = gspread.authorize(creds4)
@@ -4666,8 +4666,8 @@ elif event=="Tactile Arena":
         with col2:
             d=st.button("Submit")
         if d:
-			sheet = client.open("Registration").sheet1
-			data=sheet.get_all_values()
+            sheet = client.open("Registration").sheet1
+            data=sheet.get_all_values()
             if reg[:4] =="TZ23":
                     creds5 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client5 = gspread.authorize(creds5)
@@ -4711,8 +4711,8 @@ elif event=="Tactile Arena":
         with col2:
             d=st.button("Submit")
         if d:
-			sheet = client.open("Registration").sheet1
-			data=sheet.get_all_values()
+            sheet = client.open("Registration").sheet1
+            data=sheet.get_all_values()
             if reg1[:4] =="TZ23":
                     creds5 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client5 = gspread.authorize(creds5)
@@ -4766,8 +4766,8 @@ elif event=="triNiFTy":
         with col2:
             d=st.button("Submit")
         if d:
-			sheet = client.open("Registration").sheet1
-			data=sheet.get_all_values()
+            sheet = client.open("Registration").sheet1
+            data=sheet.get_all_values()
             if reg[:4] =="TZ23":
                     creds6 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client6 = gspread.authorize(creds6)
@@ -4808,8 +4808,8 @@ elif event=="Techverse - Workshop":
         with col2:
             d=st.button("Submit")
         if d:
-			sheet = client.open("Registration").sheet1
-			data=sheet.get_all_values()
+            sheet = client.open("Registration").sheet1
+            data=sheet.get_all_values()
             if reg[:4] =="TZ23":
                 if adm.upper().strip() in CAIDS:
                     #CAIDS = [ 'CA_123', 'CA_124']
@@ -4854,8 +4854,8 @@ elif event=="Techverse - Workshop":
         with col2:
             d=st.button("Submit")
         if d:
-			sheet = client.open("Registration").sheet1
-			data=sheet.get_all_values()
+            sheet = client.open("Registration").sheet1
+            data=sheet.get_all_values()
             if reg[:4] =="TZ23":
                     creds7 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client7 = gspread.authorize(creds7)
@@ -4897,8 +4897,8 @@ elif event=="Techverse - Workshop":
         with col2:
             d=st.button("Submit")
         if d:
-			sheet = client.open("Registration").sheet1
-			data=sheet.get_all_values()
+            sheet = client.open("Registration").sheet1
+            data=sheet.get_all_values()
             if reg[:4] =="TZ23":
                     creds7 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client7 = gspread.authorize(creds7)
@@ -4940,8 +4940,8 @@ elif event=="Techverse - Workshop":
         with col2:
             d=st.button("Submit")
         if d:
-	    	sheet = client.open("Registration").sheet1
-           	data=sheet.get_all_values()
+            sheet = client.open("Registration").sheet1
+            data=sheet.get_all_values()
             if reg[:4] =="TZ23":
                     creds7 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client7 = gspread.authorize(creds7)
@@ -5005,7 +5005,7 @@ elif event=="Techverse - Workshop":
         #     else:
         #                 st.error("Invalid Register ID.")        
 elif event=="Generic - Run":
-    p=st.selectbox("Selelct the number of participants: ",options=["--Choose--","One","Two"])
+    p=st.selectbox("Select the number of participants: ",options=["--Choose--","One","Two"])
     if p=="One":
         st.header("Fill in the appropriate details ⬇️")
         reg=st.text_input('Your register ID:')
@@ -5015,8 +5015,8 @@ elif event=="Generic - Run":
         with col2:
             d=st.button("Submit")
         if d:
-	    	sheet = client.open("Registration").sheet1
-          	data=sheet.get_all_values()
+            sheet = client.open("Registration").sheet1
+            data=sheet.get_all_values()
             if reg[:4] =="TZ23":
                     creds8 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client8 = gspread.authorize(creds8)
@@ -5060,8 +5060,8 @@ elif event=="Generic - Run":
         with col2:
             d=st.button("Submit")
         if d:
-	    	sheet = client.open("Registration").sheet1
-          	data=sheet.get_all_values()
+            sheet = client.open("Registration").sheet1
+            data=sheet.get_all_values()
             if reg1[:4] =="TZ23":
                 creds8 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                 client8 = gspread.authorize(creds8)
