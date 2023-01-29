@@ -4582,6 +4582,7 @@ if event=="Techrival":
             d=st.button("Submit")
         if d:
 			sheet = client.open("Registration").sheet1
+			
 			data=sheet.get_all_values()
             if reg[:4] =="TZ23":
                     creds2 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
