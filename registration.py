@@ -19,7 +19,9 @@ st.markdown(hide_ststyle, unsafe_allow_html=True)
 img = Image.open('TZ_logo2.png')
 st.image(img)
 
-creds = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
+api_enter = "technotronz3.json"
+
+creds = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
 client = gspread.authorize(creds)
 sheet = client.open("Registration").sheet1
 data=sheet.get_all_values()
@@ -4579,7 +4581,7 @@ if event=="Techrival":
             d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
-                    creds2 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
+                    creds2 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client2 = gspread.authorize(creds2)
                     sheet2 = client2.open("Techrival").sheet1
                     data2=sheet2.get_all_values()
@@ -4619,7 +4621,7 @@ elif event=="Hacklite":
             d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
-                    creds4 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
+                    creds4 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client4 = gspread.authorize(creds4)
                     sheet4 = client4.open("Hacklite").sheet1
                     data4=sheet4.get_all_values()
@@ -4660,7 +4662,7 @@ elif event=="Tactile Arena":
             d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
-                    creds5 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
+                    creds5 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client5 = gspread.authorize(creds5)
                     sheet5 = client5.open("Tacktile Arena").sheet1
                     data5=sheet5.get_all_values()
@@ -4703,7 +4705,7 @@ elif event=="Tactile Arena":
             d=st.button("Submit")
         if d:
             if reg1[:4] =="TZ23":
-                    creds5 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
+                    creds5 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client5 = gspread.authorize(creds5)
                     sheet5 = client5.open("Tacktile Arena").sheet1
                     data5=sheet5.get_all_values()
@@ -4756,7 +4758,7 @@ elif event=="triNiFTy":
             d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
-                    creds6 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
+                    creds6 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client6 = gspread.authorize(creds6)
                     sheet6 = client6.open("trinifty").sheet1
                     data6=sheet6.get_all_values()
@@ -4798,7 +4800,7 @@ elif event=="Techverse - Workshop":
             if reg[:4] =="TZ23":
                 if adm.upper().strip() in CAIDS:
                     #CAIDS = [ 'CA_123', 'CA_124']
-                    creds7 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
+                    creds7 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client7 = gspread.authorize(creds7)
                     sheet7 = client7.open("Workshop").sheet1
                     data7=sheet7.get_all_values()
@@ -4840,7 +4842,7 @@ elif event=="Techverse - Workshop":
             d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
-                    creds7 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
+                    creds7 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client7 = gspread.authorize(creds7)
                     sheet7 = client7.open("Workshop").sheet1
                     data7=sheet7.get_all_values()
@@ -4881,7 +4883,7 @@ elif event=="Techverse - Workshop":
             d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
-                    creds7 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
+                    creds7 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client7 = gspread.authorize(creds7)
                     sheet7 = client7.open("Workshop").sheet1
                     data7=sheet7.get_all_values()
@@ -4922,7 +4924,7 @@ elif event=="Techverse - Workshop":
             d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
-                    creds7 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
+                    creds7 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client7 = gspread.authorize(creds7)
                     sheet7 = client7.open("Workshop").sheet1
                     data7=sheet7.get_all_values()
@@ -4995,7 +4997,7 @@ elif event=="Generic - Run":
             d=st.button("Submit")
         if d:
             if reg[:4] =="TZ23":
-                    creds8 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
+                    creds8 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                     client8 = gspread.authorize(creds8)
                     sheet8 = client8.open("Generic run").sheet1
                     data8=sheet8.get_all_values()
@@ -5038,7 +5040,7 @@ elif event=="Generic - Run":
             d=st.button("Submit")
         if d:
             if reg1[:4] =="TZ23":
-                creds8 = ServiceAccountCredentials.from_json_keyfile_name("technotronz23-general.json", scope)
+                creds8 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
                 client8 = gspread.authorize(creds8)
                 sheet8 = client8.open("Generic run").sheet1
                 data8=sheet8.get_all_values()
