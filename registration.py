@@ -19,7 +19,7 @@ st.markdown(hide_ststyle, unsafe_allow_html=True)
 img = Image.open('TZ_logo2.png')
 st.image(img)
 
-api_enter = "technotronz3.json"
+api_enter = "final2.json"
 
 creds = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
 client = gspread.authorize(creds)
