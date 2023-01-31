@@ -4486,18 +4486,18 @@ FROM = "technotronz.23.official@gmail.com"
 password="bfggnsnnxzbxufnj"
 FROM = "technotronz.tz.23.iete@gmail.com"
 password="nowodhslyebzlrsb"
-def em2(id,name,mail,date,event,html_):
+def em2(id,name,mail,date,event,html_,FROM_=FROM,password_=password):
 	message = EMsg()
 	message['subject'] = f"Successfully registered in {event} of TZ'23"
 	message['to'] = mail
-	message['from']=FROM
+	message['from']=FROM_
 	html_=html_.replace("[technocrats]",name)
 	html_=html_.replace("[TZ23III]",id)
 	html_=html_.replace("[EVENT_]",event)
 	html_=html_.replace("[DATE]",date)
 	message.add_alternative(html_,subtype='html')
 	with smtplib.SMTP_SSL('smtp.gmail.com',465) as smtp:
-		smtp.login(FROM,password)
+		smtp.login(FROM_,password_)
 		smtp.send_message(message)
 def em(id,name,to,html_,subject):
     message = EMsg()
@@ -4598,7 +4598,7 @@ if event=="Techrival":
                                 if data[i][6]==ph:
                                     sheet2.insert_row([reg,name,ph,data[i][3]],len(data2)+1)
 #                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
-                                    em2(reg,name,data[i][3],"February 1,2023",event,html_er)
+                                    em2(reg,name,data[i][3],"February 1,2023",event,html_er,"techrival.tz23@gmail.com","jxjadjffgbxbctjb")
                                     st.success("Successfully registered to the Techrival! (Email is sent to registered Mail ID)")
                                     fun3()
 #                                     c1,c2,c3,c4=st.columns([1,1,1,1])
@@ -4639,7 +4639,7 @@ elif event=="Hacklite":
                                 if data[i][6]==ph:
                                     sheet4.insert_row([reg,name,ph,data[i][3]],len(data4)+1)
 #                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
-                                    em2(reg,name,data[i][3],"February 2,2023",event,html_er)
+                                    em2(reg,name,data[i][3],"February 2,2023",event,html_erM,"hacklite.tz23@gmail.com","wmldvhsxuxcoqhic")
                                     st.success("Successfully registered to the Hacklite! (Email is sent to registered Mail ID)")
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
 #                                     fun(data[i][3],"Hacklite",data[i][1])
@@ -4682,7 +4682,7 @@ elif event=="Tactile Arena":
                                 if data[i][6]==ph:
                                     sheet5.insert_row([reg,name,ph,data[i][3]],len(data5)+1)
 #                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
-                                    em2(reg,name,data[i][3],"February 3,2023",event,html_er)
+                                    em2(reg,name,data[i][3],"February 3,2023",event,html_er,"tactilearena@gmail.com", "ywqmfqvcpiltelfu")
                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
 #                                     fun(data[i][3],event,data[i][1])
@@ -4733,8 +4733,8 @@ elif event=="Tactile Arena":
                                                     sheet5.insert_row([reg1,name1,ph1,data[i][3],"2nd Part.",reg2,name2,ph2,data[j][3]],len(data5)+1)
 #                                                     em(reg1,name1,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
 #                                                     em(reg2,name2,data[j][3],html_wno,f"Successfully registered in {event} of TZ'23")
-                                                    em2(reg1,name1,data[i][3],"February 3,2023",event,html_er)
-                                                    em2(reg2,name2,data[j][3],"February 3,2023",event,html_er)  
+                                                    em2(reg1,name1,data[i][3],"February 3,2023",event,html_er,"tactilearena@gmail.com","ywqmfqvcpiltelfu")
+                                                    em2(reg2,name2,data[j][3],"February 3,2023",event,html_er,"tactilearena@gmail.com","ywqmfqvcpiltelfu")  
                                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
                                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
 #                                                     fun2(data[i][3],event,data[i][1],data[j][3],data[j][1])
