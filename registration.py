@@ -4639,7 +4639,7 @@ elif event=="Hacklite":
                                 if data[i][6]==ph:
                                     sheet4.insert_row([reg,name,ph,data[i][3]],len(data4)+1)
 #                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
-                                    em2(reg,name,data[i][3],"February 2,2023",event,html_,"hacklite.tz23@gmail.com","zuzizoukirwtnvpg")
+                                    em2(reg,name,data[i][3],"February 2,2023",event,html_er,"hacklite.tz23@gmail.com","zuzizoukirwtnvpg")
                                     st.success("Successfully registered to the Hacklite! (Email is sent to registered Mail ID)")
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
 #                                     fun(data[i][3],"Hacklite",data[i][1])
