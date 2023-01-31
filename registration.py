@@ -4485,7 +4485,7 @@ link="https://discord.gg/Pf4cqxZtQu"
 FROM = "technotronz.23.official@gmail.com"
 password="bfggnsnnxzbxufnj"
 FROM = "technotronz.tz.23.iete@gmail.com"
-password="nowodhslyebzlrsb
+password="nowodhslyebzlrsb"
 def em2(id,name,mail,date,event,html_):
 	message = EMsg()
 	message['subject'] = f"Successfully registered in {event} of TZ'23"
