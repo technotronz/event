@@ -4480,10 +4480,10 @@ div.stButton > button:first-child {
 # with col2:
 #             d=st.button("Submit")
 link="https://discord.gg/Pf4cqxZtQu"
-FROM = "technotronz23@gmail.com"
-password="qsfcotxmimrdiogr"
-# FROM = "technotronz.23.official@gmail.com"
-# password="bfggnsnnxzbxufnj"
+# FROM = "technotronz23@gmail.com"
+# password="qsfcotxmimrdiogr"
+FROM = "technotronz.23.official@gmail.com"
+password="bfggnsnnxzbxufnj"
 def em2(id,name,mail,date,event,html_):
 	message = EMsg()
 	message['subject'] = f"Successfully registered in {event} of TZ'23"
