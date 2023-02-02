@@ -4575,7 +4575,7 @@ event=st.selectbox("Select the event: ",options=["--Choose--","Tactile Arena", "
 #         ph=st.text_input('Your contact number:')
 #         if st.button("Submit"):
 if event=="Techrival":
-	st.error(" Online registrations are closed. Thank you!"
+	st.error(" Online registrations are closed. Thank you!")
 #         st.header("Fill in the appropriate details ⬇️")
 #         reg=st.text_input('Your registration ID:')
 #         name=st.text_input('Your name [Case sensitive]:')
@@ -4618,7 +4618,7 @@ if event=="Techrival":
 #             else:
 #                     st.error("Invalid Register ID.")
 elif event=="Hacklite":
-	st.error(" Online registrations are closed. Thank you!"
+	st.error(" Online registrations are closed. Thank you!")
 #         st.header("Fill in the appropriate details ⬇️")
 #         reg=st.text_input('Your registration ID:')
 #         name=st.text_input('Your name [Case sensitive]:')
