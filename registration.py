@@ -4557,7 +4557,7 @@ def fun3():
 # mail_amb(reg,name,data[i][3],ch)
 
 # def fun3(mail,event,)
-CAIDS = ['CA_123','CA_124']
+CAIDS = ['CA_123','CA_124','MASK50']
 one,two,thr=st.columns([0.2,1, 0.1])
 with two:
             st.header("Technotronz'23 Event Registration")
