@@ -4575,88 +4575,90 @@ event=st.selectbox("Select the event: ",options=["--Choose--","Tactile Arena", "
 #         ph=st.text_input('Your contact number:')
 #         if st.button("Submit"):
 if event=="Techrival":
-        st.header("Fill in the appropriate details ⬇️")
-        reg=st.text_input('Your registration ID:')
-        name=st.text_input('Your name [Case sensitive]:')
-        ph=st.text_input('Your contact number:')
-        col1,col2,col3=st.columns([2,1,2])
-        with col2:
-            d=st.button("Submit")
-        if d:
-            sheet = client.open("Registration").sheet1
-            data=sheet.get_all_values()
-            if reg[:4] =="TZ23":
-                    creds2 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
-                    client2 = gspread.authorize(creds2)
-                    sheet2 = client2.open("Techrival").sheet1
-                    data2=sheet2.get_all_values()
-                    print(1)
-                    for i in range(1,len(data)):
-                        if(data[i][0]==reg):
-                            print(2)
-                            if(name != " "):
-                                if data[i][6]==ph:
-                                    sheet2.insert_row([reg,name,ph,data[i][3]],len(data2)+1)
-#                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
-                                    em2(reg,name,data[i][3],"February 1,2023",event,html_er,"techrival.tz23@gmail.com","jxjadjffgbxbctjb")
-                                    st.success("Successfully registered to the Techrival! (Email is sent to registered Mail ID)")
-                                    fun3()
-#                                     c1,c2,c3,c4=st.columns([1,1,1,1])
+	st.error(" Online registrations are closed. Thank you!"
+#         st.header("Fill in the appropriate details ⬇️")
+#         reg=st.text_input('Your registration ID:')
+#         name=st.text_input('Your name [Case sensitive]:')
+#         ph=st.text_input('Your contact number:')
+#         col1,col2,col3=st.columns([2,1,2])
+#         with col2:
+#             d=st.button("Submit")
+#         if d:
+#             sheet = client.open("Registration").sheet1
+#             data=sheet.get_all_values()
+#             if reg[:4] =="TZ23":
+#                     creds2 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
+#                     client2 = gspread.authorize(creds2)
+#                     sheet2 = client2.open("Techrival").sheet1
+#                     data2=sheet2.get_all_values()
+#                     print(1)
+#                     for i in range(1,len(data)):
+#                         if(data[i][0]==reg):
+#                             print(2)
+#                             if(name != " "):
+#                                 if data[i][6]==ph:
+#                                     sheet2.insert_row([reg,name,ph,data[i][3]],len(data2)+1)
+# #                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
+#                                     em2(reg,name,data[i][3],"February 1,2023",event,html_er,"techrival.tz23@gmail.com","jxjadjffgbxbctjb")
+#                                     st.success("Successfully registered to the Techrival! (Email is sent to registered Mail ID)")
+#                                     fun3()
+# #                                     c1,c2,c3,c4=st.columns([1,1,1,1])
 #                                     with c2:
                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
 #                                     fun(data[i][3],"Techrival",data[i][1])
-                                    break
-                                else:
-                                    st.error("Invalid Register Contact Number")
-                                    break    
-                            else:
-                                st.error("Invalid Register Name")
-                                break
-                    else:
-                        st.error("Invalid Register ID.")
-            else:
-                    st.error("Invalid Register ID.")
+#                                     break
+#                                 else:
+#                                     st.error("Invalid Register Contact Number")
+#                                     break    
+#                             else:
+#                                 st.error("Invalid Register Name")
+#                                 break
+#                     else:
+#                         st.error("Invalid Register ID.")
+#             else:
+#                     st.error("Invalid Register ID.")
 elif event=="Hacklite":
-        st.header("Fill in the appropriate details ⬇️")
-        reg=st.text_input('Your registration ID:')
-        name=st.text_input('Your name [Case sensitive]:')
-        ph=st.text_input('Your contact number:')
-        col1,col2,col3=st.columns([2,1,2])
-        with col2:
-            d=st.button("Submit")
-        if d:
-            sheet = client.open("Registration").sheet1
-            data=sheet.get_all_values()
-            if reg[:4] =="TZ23":
-                    creds4 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
-                    client4 = gspread.authorize(creds4)
-                    sheet4 = client4.open("Hacklite").sheet1
-                    data4=sheet4.get_all_values()
-                    for i in range(1,len(data)):
-                        if(data[i][0]==reg):
-                            print(2)
-                            if(name != " "):
-                                if data[i][6]==ph:
-                                    sheet4.insert_row([reg,name,ph,data[i][3]],len(data4)+1)
-#                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
-                                    em2(reg,name,data[i][3],"February 2,2023",event,html_er,"hacklite.tz23@gmail.com","zuzizoukirwtnvpg")
-                                    st.success("Successfully registered to the Hacklite! (Email is sent to registered Mail ID)")
-                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
-#                                     fun(data[i][3],"Hacklite",data[i][1])
-                                    fun3()
-#                                     link = '[Make sure you join our discord server to receive regular updates](https://discord.gg/Pf4cqxZtQu)'
-#                                     st.markdown(link, unsafe_allow_html=True)
-                                    break
-                                else:
-                                    st.error("Invalid Register Contact Number")
-                                    break    
-                            else:
-                                st.error("Invalid Register Name")
-                                break
-                    else:
-                        st.error("Invalid Register ID.")
-            else:
-                    st.error("Invalid Register ID.")
+	st.error(" Online registrations are closed. Thank you!"
+#         st.header("Fill in the appropriate details ⬇️")
+#         reg=st.text_input('Your registration ID:')
+#         name=st.text_input('Your name [Case sensitive]:')
+#         ph=st.text_input('Your contact number:')
+#         col1,col2,col3=st.columns([2,1,2])
+#         with col2:
+#             d=st.button("Submit")
+#         if d:
+#             sheet = client.open("Registration").sheet1
+#             data=sheet.get_all_values()
+#             if reg[:4] =="TZ23":
+#                     creds4 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
+#                     client4 = gspread.authorize(creds4)
+#                     sheet4 = client4.open("Hacklite").sheet1
+#                     data4=sheet4.get_all_values()
+#                     for i in range(1,len(data)):
+#                         if(data[i][0]==reg):
+#                             print(2)
+#                             if(name != " "):
+#                                 if data[i][6]==ph:
+#                                     sheet4.insert_row([reg,name,ph,data[i][3]],len(data4)+1)
+# #                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
+#                                     em2(reg,name,data[i][3],"February 2,2023",event,html_er,"hacklite.tz23@gmail.com","zuzizoukirwtnvpg")
+#                                     st.success("Successfully registered to the Hacklite! (Email is sent to registered Mail ID)")
+#                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+# #                                     fun(data[i][3],"Hacklite",data[i][1])
+#                                     fun3()
+# #                                     link = '[Make sure you join our discord server to receive regular updates](https://discord.gg/Pf4cqxZtQu)'
+# #                                     st.markdown(link, unsafe_allow_html=True)
+#                                     break
+#                                 else:
+#                                     st.error("Invalid Register Contact Number")
+#                                     break    
+#                             else:
+#                                 st.error("Invalid Register Name")
+#                                 break
+#                     else:
+#                         st.error("Invalid Register ID.")
+#             else:
+#                     st.error("Invalid Register ID.")
 elif event=="Tactile Arena":
     p=st.selectbox("Selelct the number of participants: ",options=["--Choose--","One","Two"])
     if p=="One":
