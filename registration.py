@@ -4660,106 +4660,107 @@ elif event=="Hacklite":
 #             else:
 #                     st.error("Invalid Register ID.")
 elif event=="Tactile Arena":
-    p=st.selectbox("Selelct the number of participants: ",options=["--Choose--","One","Two"])
-    if p=="One":
-        st.header("Fill in the appropriate details ⬇️")
-        reg=st.text_input('Your registration ID:')
-        name=st.text_input('Your name [Case sensitive]:')
-        ph=st.text_input('Your contact number:')
-        col1,col2,col3=st.columns([2,1,2])
-        with col2:
-            d=st.button("Submit")
-        if d:
-            sheet = client.open("Registration").sheet1
-            data=sheet.get_all_values()
-            if reg[:4] =="TZ23":
-                    creds5 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
-                    client5 = gspread.authorize(creds5)
-                    sheet5 = client5.open("Tacktile Arena").sheet1
-                    data5=sheet5.get_all_values()
-                    for i in range(1,len(data)):
-                        if(data[i][0]==reg):
-                            print(2)
-                            if(name != " "):
-                                if data[i][6]==ph:
-                                    sheet5.insert_row([reg,name,ph,data[i][3]],len(data5)+1)
-#                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
-                                    em2(reg,name,data[i][3],"February 3,2023",event,html_er,"tactilearena@gmail.com", "ywqmfqvcpiltelfu")
-                                    st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
-                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
-#                                     fun(data[i][3],event,data[i][1])
-                                    fun3()
-                                    break
-                                else:
-                                    st.error("Invalid Register Contact Number")
-                                    break    
-                            else:
-                                st.error("Invalid Register Name")
-                                break
-                    else:
-                        st.error("Invalid Register ID.")
-            else:
-                st.error("Invalid Register ID.")
-    elif p=="Two":
-        st.header("Fill in the appropriate details ⬇️")
-        st.header("Participant 1: ")
-        reg1=st.text_input('Registration ID of participant 1:')
-        name1=st.text_input('Name of participant 1: [Case sensitive]')
-        ph1=st.text_input('Contact number of participant 1:')
+	st.error(" Online registrations are closed. Thank you!")
+#     p=st.selectbox("Selelct the number of participants: ",options=["--Choose--","One","Two"])
+#     if p=="One":
+#         st.header("Fill in the appropriate details ⬇️")
+#         reg=st.text_input('Your registration ID:')
+#         name=st.text_input('Your name [Case sensitive]:')
+#         ph=st.text_input('Your contact number:')
+#         col1,col2,col3=st.columns([2,1,2])
+#         with col2:
+#             d=st.button("Submit")
+#         if d:
+#             sheet = client.open("Registration").sheet1
+#             data=sheet.get_all_values()
+#             if reg[:4] =="TZ23":
+#                     creds5 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
+#                     client5 = gspread.authorize(creds5)
+#                     sheet5 = client5.open("Tacktile Arena").sheet1
+#                     data5=sheet5.get_all_values()
+#                     for i in range(1,len(data)):
+#                         if(data[i][0]==reg):
+#                             print(2)
+#                             if(name != " "):
+#                                 if data[i][6]==ph:
+#                                     sheet5.insert_row([reg,name,ph,data[i][3]],len(data5)+1)
+# #                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
+#                                     em2(reg,name,data[i][3],"February 3,2023",event,html_er,"tactilearena@gmail.com", "ywqmfqvcpiltelfu")
+#                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
+#                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+# #                                     fun(data[i][3],event,data[i][1])
+#                                     fun3()
+#                                     break
+#                                 else:
+#                                     st.error("Invalid Register Contact Number")
+#                                     break    
+#                             else:
+#                                 st.error("Invalid Register Name")
+#                                 break
+#                     else:
+#                         st.error("Invalid Register ID.")
+#             else:
+#                 st.error("Invalid Register ID.")
+#     elif p=="Two":
+#         st.header("Fill in the appropriate details ⬇️")
+#         st.header("Participant 1: ")
+#         reg1=st.text_input('Registration ID of participant 1:')
+#         name1=st.text_input('Name of participant 1: [Case sensitive]')
+#         ph1=st.text_input('Contact number of participant 1:')
 
-        st.header("Participant 2: ")
-        reg2=st.text_input('Registration ID of participant 2:')
-        name2=st.text_input('Name of participant 2: [Case sensitive]')
-        ph2=st.text_input('Contact number of participant 2:')
-        col1,col2,col3=st.columns([2,1,2])
-        with col2:
-            d=st.button("Submit")
-        if d:
-            sheet = client.open("Registration").sheet1
-            data=sheet.get_all_values()
-            if reg1[:4] =="TZ23":
-                    creds5 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
-                    client5 = gspread.authorize(creds5)
-                    sheet5 = client5.open("Tacktile Arena").sheet1
-                    data5=sheet5.get_all_values()
-                    for i in range(1,len(data)):
-                        if(data[i][0]==reg1):
-                            print(2)
-                            if(name1 != " "):
-                                if data[i][6]==ph1:
-                                    for j in range(1,len(data)):
-                                        if(data[j][0]==reg2):
-                                            print(2)
-                                            if(name2 != " "):
-                                                if data[j][6]==ph2:
-                                                    sheet5.insert_row([reg1,name1,ph1,data[i][3],"2nd Part.",reg2,name2,ph2,data[j][3]],len(data5)+1)
-#                                                     em(reg1,name1,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
-#                                                     em(reg2,name2,data[j][3],html_wno,f"Successfully registered in {event} of TZ'23")
-                                                    em2(reg1,name1,data[i][3],"February 3,2023",event,html_er,"tactilearena@gmail.com","ywqmfqvcpiltelfu")
-                                                    em2(reg2,name2,data[j][3],"February 3,2023",event,html_er,"tactilearena@gmail.com","ywqmfqvcpiltelfu")  
-                                                    st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
-                                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
-#                                                     fun2(data[i][3],event,data[i][1],data[j][3],data[j][1])
-                                                    fun3()
-                                                    break
-                                                else:
-                                                    st.error("Invalid Participant 2 Contact Number")
-                                                    break
-                                            else:            
-                                                st.error("Invalid Participant 2 Register Name")
-                                                break
-                                    else:
-                                        st.error("Invalid Participant 2 Register ID")    
-                                else:
-                                    st.error("Invalid Register 1 Contact Number")
-                                    break    
-                            else:
-                                st.error("Invalid Participant 1 Register Name")
-                                break
-                    # else:
-                        # st.error("Invalid Participant 1 Register ID.")
-            else:
-                st.error("Invalid Participant 1 Register ID.")                 
+#         st.header("Participant 2: ")
+#         reg2=st.text_input('Registration ID of participant 2:')
+#         name2=st.text_input('Name of participant 2: [Case sensitive]')
+#         ph2=st.text_input('Contact number of participant 2:')
+#         col1,col2,col3=st.columns([2,1,2])
+#         with col2:
+#             d=st.button("Submit")
+#         if d:
+#             sheet = client.open("Registration").sheet1
+#             data=sheet.get_all_values()
+#             if reg1[:4] =="TZ23":
+#                     creds5 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
+#                     client5 = gspread.authorize(creds5)
+#                     sheet5 = client5.open("Tacktile Arena").sheet1
+#                     data5=sheet5.get_all_values()
+#                     for i in range(1,len(data)):
+#                         if(data[i][0]==reg1):
+#                             print(2)
+#                             if(name1 != " "):
+#                                 if data[i][6]==ph1:
+#                                     for j in range(1,len(data)):
+#                                         if(data[j][0]==reg2):
+#                                             print(2)
+#                                             if(name2 != " "):
+#                                                 if data[j][6]==ph2:
+#                                                     sheet5.insert_row([reg1,name1,ph1,data[i][3],"2nd Part.",reg2,name2,ph2,data[j][3]],len(data5)+1)
+# #                                                     em(reg1,name1,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
+# #                                                     em(reg2,name2,data[j][3],html_wno,f"Successfully registered in {event} of TZ'23")
+#                                                     em2(reg1,name1,data[i][3],"February 3,2023",event,html_er,"tactilearena@gmail.com","ywqmfqvcpiltelfu")
+#                                                     em2(reg2,name2,data[j][3],"February 3,2023",event,html_er,"tactilearena@gmail.com","ywqmfqvcpiltelfu")  
+#                                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
+#                                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+# #                                                     fun2(data[i][3],event,data[i][1],data[j][3],data[j][1])
+#                                                     fun3()
+#                                                     break
+#                                                 else:
+#                                                     st.error("Invalid Participant 2 Contact Number")
+#                                                     break
+#                                             else:            
+#                                                 st.error("Invalid Participant 2 Register Name")
+#                                                 break
+#                                     else:
+#                                         st.error("Invalid Participant 2 Register ID")    
+#                                 else:
+#                                     st.error("Invalid Register 1 Contact Number")
+#                                     break    
+#                             else:
+#                                 st.error("Invalid Participant 1 Register Name")
+#                                 break
+#                     # else:
+#                         # st.error("Invalid Participant 1 Register ID.")
+#             else:
+#                 st.error("Invalid Participant 1 Register ID.")                 
 
 elif event=="triNiFTy":
         st.header("Fill in the appropriate details ⬇️")
