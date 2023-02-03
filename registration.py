@@ -4557,7 +4557,7 @@ def fun3():
 # mail_amb(reg,name,data[i][3],ch)
 
 # def fun3(mail,event,)
-CAIDS = ['CA_123','CA_124','MASK50']
+CAIDS = ['CA_123','CA_124','MASK50','']
 one,two,thr=st.columns([0.2,1, 0.1])
 with two:
             st.header("Technotronz'23 Event Registration")
@@ -4802,8 +4802,8 @@ elif event=="triNiFTy":
             else:
                 st.error("Invalid Register ID.")
 elif event=="Techverse - Workshop":
-    ch=st.selectbox("Select the category to avail your discount: ",options=["--Choose--","Campus Ambassador","PSG Tech Student","IETE membership holder","None of the above"])
-    if ch=="Campus Ambassador":
+    ch=st.selectbox("Select the category to avail your discount: ",options=["--Choose--","Coupon Code","PSG Tech Student","IETE membership holder","None of the above"])
+    if ch=="Coupon Code":
         st.header("Fill in the appropriate details ⬇️")
         reg=st.text_input('Your registration ID:')
         adm=st.text_input('Your campus ambassador ID:')
