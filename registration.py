@@ -4763,6 +4763,7 @@ elif event=="Tactile Arena":
 #                 st.error("Invalid Participant 1 Register ID.")                 
 
 elif event=="triNiFTy":
+# 	st.error(" Online registrations are closed. Thank you!")
         st.header("Fill in the appropriate details ⬇️")
         reg=st.text_input('Your registration ID:')
         name=st.text_input('Your name [Case sensitive]:')
