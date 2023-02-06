@@ -4803,180 +4803,181 @@ elif event=="triNiFTy":
 #             else:
 #                 st.error("Invalid Register ID.")
 elif event=="Techverse - Workshop":
-    ch=st.selectbox("Select the category to avail your discount: ",options=["--Choose--","Coupon Code/Campus Ambassador","PSG Tech Student","IETE membership holder","None of the above"])
-    if ch=="Coupon Code/Campus Ambassador":
-        st.header("Fill in the appropriate details ⬇️")
-        reg=st.text_input('Your registration ID:')
-        adm=st.text_input('Your campus ambassador ID:')
-        name=st.text_input('Your name [Case sensitive]:')
-        ph=st.text_input('Your contact number:')
-        col1,col2,col3=st.columns([2,1,2])
-        with col2:
-            d=st.button("Submit")
-        if d:
-            sheet = client.open("Registration").sheet1
-            data=sheet.get_all_values()
-            if reg[:4] =="TZ23":
-                if adm.upper().strip() in CAIDS:
-                    #CAIDS = [ 'CA_123', 'CA_124']
-                    creds7 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
-                    client7 = gspread.authorize(creds7)
-                    sheet7 = client7.open("Workshop").sheet1
-                    data7=sheet7.get_all_values()
-                    for i in range(1,len(data)):
-                        if(data[i][0]==reg):
-                            print(2)
-                            if(name != " "):
-                                if data[i][6]==ph:
-                                    sheet7.insert_row([reg,name,ph,data[i][3],ch,adm],len(data7)+1)
-                                    em(reg,name,data[i][3],html_wca,"Complete your payment for Techverse workshop confirmation of TZ'23!")
-#                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
-                                    st.success("A mail regarding payment procedure will be sent within 24 hrs. Check it out to complete your registration.")
-#                                     fun3()
-#                                     mail_amb(reg,name,data[i][3],ch)
-                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
-                                    # fun3(data[i][3],event,data[i][1],ch)
-                                    break
-                                else:
-                                    st.error("Invalid Register Contact Number")
-                                    break    
-                            else:
-                                st.error("Invalid Register Name")
-                                break
-                    else:
-                        st.error("Invalid Register ID.")
-                else:
-                    st.error("Invalid campus ambassador ID.")
-            else:
-                    st.error("Invalid Register ID.")
-    if ch=="PSG Tech Student":
-        st.header("Fill in the appropriate details ⬇️")
-        reg=st.text_input('Your register ID:')
-        rollno=st.text_input('Your roll number: ')
-        # adm=st.text_input('Your Campus ambassador ID:')
-        name=st.text_input('Your name [Case sensitive]:')
-        ph=st.text_input('Your contact number:')
-        col1,col2,col3=st.columns([2,1,2])
-        with col2:
-            d=st.button("Submit")
-        if d:
-            sheet = client.open("Registration").sheet1
-            data=sheet.get_all_values()
-            if reg[:4] =="TZ23":
-                    creds7 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
-                    client7 = gspread.authorize(creds7)
-                    sheet7 = client7.open("Workshop").sheet1
-                    data7=sheet7.get_all_values()
-                    for i in range(1,len(data)):
-                        if(data[i][0]==reg):
-                            print(2)
-                            if(name != " "):
-                                if data[i][6]==ph:
-                                    sheet7.insert_row([reg,name,ph,data[i][3],ch,rollno],len(data7)+1)
-                                    em(reg,name,data[i][3],html_wpsg,"Complete your payment for Techverse workshop confirmation of TZ'23!")
-#                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
-                                    st.success("A mail regarding payment procedure will be sent within 24 hrs. Check it out to complete your registration.")
+    st.error(" Online registrations are closed. Thank you!")
+#     ch=st.selectbox("Select the category to avail your discount: ",options=["--Choose--","Coupon Code/Campus Ambassador","PSG Tech Student","IETE membership holder","None of the above"])
+#     if ch=="Coupon Code/Campus Ambassador":
+#         st.header("Fill in the appropriate details ⬇️")
+#         reg=st.text_input('Your registration ID:')
+#         adm=st.text_input('Your campus ambassador ID:')
+#         name=st.text_input('Your name [Case sensitive]:')
+#         ph=st.text_input('Your contact number:')
+#         col1,col2,col3=st.columns([2,1,2])
+#         with col2:
+#             d=st.button("Submit")
+#         if d:
+#             sheet = client.open("Registration").sheet1
+#             data=sheet.get_all_values()
+#             if reg[:4] =="TZ23":
+#                 if adm.upper().strip() in CAIDS:
+#                     #CAIDS = [ 'CA_123', 'CA_124']
+#                     creds7 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
+#                     client7 = gspread.authorize(creds7)
+#                     sheet7 = client7.open("Workshop").sheet1
+#                     data7=sheet7.get_all_values()
+#                     for i in range(1,len(data)):
+#                         if(data[i][0]==reg):
+#                             print(2)
+#                             if(name != " "):
+#                                 if data[i][6]==ph:
+#                                     sheet7.insert_row([reg,name,ph,data[i][3],ch,adm],len(data7)+1)
+#                                     em(reg,name,data[i][3],html_wca,"Complete your payment for Techverse workshop confirmation of TZ'23!")
+# #                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
+#                                     st.success("A mail regarding payment procedure will be sent within 24 hrs. Check it out to complete your registration.")
+# #                                     fun3()
+# #                                     mail_amb(reg,name,data[i][3],ch)
+#                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+#                                     # fun3(data[i][3],event,data[i][1],ch)
+#                                     break
+#                                 else:
+#                                     st.error("Invalid Register Contact Number")
+#                                     break    
+#                             else:
+#                                 st.error("Invalid Register Name")
+#                                 break
+#                     else:
+#                         st.error("Invalid Register ID.")
+#                 else:
+#                     st.error("Invalid campus ambassador ID.")
+#             else:
+#                     st.error("Invalid Register ID.")
+#     if ch=="PSG Tech Student":
+#         st.header("Fill in the appropriate details ⬇️")
+#         reg=st.text_input('Your register ID:')
+#         rollno=st.text_input('Your roll number: ')
+#         # adm=st.text_input('Your Campus ambassador ID:')
+#         name=st.text_input('Your name [Case sensitive]:')
+#         ph=st.text_input('Your contact number:')
+#         col1,col2,col3=st.columns([2,1,2])
+#         with col2:
+#             d=st.button("Submit")
+#         if d:
+#             sheet = client.open("Registration").sheet1
+#             data=sheet.get_all_values()
+#             if reg[:4] =="TZ23":
+#                     creds7 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
+#                     client7 = gspread.authorize(creds7)
+#                     sheet7 = client7.open("Workshop").sheet1
+#                     data7=sheet7.get_all_values()
+#                     for i in range(1,len(data)):
+#                         if(data[i][0]==reg):
+#                             print(2)
+#                             if(name != " "):
+#                                 if data[i][6]==ph:
+#                                     sheet7.insert_row([reg,name,ph,data[i][3],ch,rollno],len(data7)+1)
+#                                     em(reg,name,data[i][3],html_wpsg,"Complete your payment for Techverse workshop confirmation of TZ'23!")
+# #                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
+#                                     st.success("A mail regarding payment procedure will be sent within 24 hrs. Check it out to complete your registration.")
 
-#                                     st.write("Check out mail regarding payment details and stay tuned for further updates!")
-#                                     fun3()
-                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
-                                    # fun3(data[i][3],event,data[i][1],ch)
-                                    break
-                                else:
-                                    st.error("Invalid Register Contact Number")
-                                    break    
-                            else:
-                                st.error("Invalid Register Name")
-                                break
-                    else:
-                        st.error("Invalid Register ID.")
-            else:
-                    st.error("Invalid Register ID.")
-    if ch=="None of the above":
-        st.header("Fill in the appropriate details ⬇️")
-        reg=st.text_input('Your register ID:')
-        rollno=st.text_input('Your roll number: ')
-        # adm=st.text_input('Your Campus ambassador ID:')
-        name=st.text_input('Your name [Case sensitive]:')
-        ph=st.text_input('Your contact number:')
-        col1,col2,col3=st.columns([2,1,2])
-        with col2:
-            d=st.button("Submit")
-        if d:
-            sheet = client.open("Registration").sheet1
-            data=sheet.get_all_values()
-            if reg[:4] =="TZ23":
-                    creds7 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
-                    client7 = gspread.authorize(creds7)
-                    sheet7 = client7.open("Workshop").sheet1
-                    data7=sheet7.get_all_values()
-                    for i in range(1,len(data)):
-                        if(data[i][0]==reg):
-                            print(2)
-                            if(name != " "):
-                                if data[i][6]==ph:
-                                    sheet7.insert_row([reg,name,ph,data[i][3],ch,rollno],len(data7)+1)
-                                    em(reg,name,data[i][3],html_wno,"Complete your payment for Techverse workshop confirmation of TZ'23!")
-#                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
-#                                     st.write("Check out mail regarding payment details and stay tuned for further updates!")
-                                    st.success("A mail regarding payment procedure will be sent within 24 hrs. Check it out to complete your registration.")
+# #                                     st.write("Check out mail regarding payment details and stay tuned for further updates!")
+# #                                     fun3()
+#                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+#                                     # fun3(data[i][3],event,data[i][1],ch)
+#                                     break
+#                                 else:
+#                                     st.error("Invalid Register Contact Number")
+#                                     break    
+#                             else:
+#                                 st.error("Invalid Register Name")
+#                                 break
+#                     else:
+#                         st.error("Invalid Register ID.")
+#             else:
+#                     st.error("Invalid Register ID.")
+#     if ch=="None of the above":
+#         st.header("Fill in the appropriate details ⬇️")
+#         reg=st.text_input('Your register ID:')
+#         rollno=st.text_input('Your roll number: ')
+#         # adm=st.text_input('Your Campus ambassador ID:')
+#         name=st.text_input('Your name [Case sensitive]:')
+#         ph=st.text_input('Your contact number:')
+#         col1,col2,col3=st.columns([2,1,2])
+#         with col2:
+#             d=st.button("Submit")
+#         if d:
+#             sheet = client.open("Registration").sheet1
+#             data=sheet.get_all_values()
+#             if reg[:4] =="TZ23":
+#                     creds7 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
+#                     client7 = gspread.authorize(creds7)
+#                     sheet7 = client7.open("Workshop").sheet1
+#                     data7=sheet7.get_all_values()
+#                     for i in range(1,len(data)):
+#                         if(data[i][0]==reg):
+#                             print(2)
+#                             if(name != " "):
+#                                 if data[i][6]==ph:
+#                                     sheet7.insert_row([reg,name,ph,data[i][3],ch,rollno],len(data7)+1)
+#                                     em(reg,name,data[i][3],html_wno,"Complete your payment for Techverse workshop confirmation of TZ'23!")
+# #                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
+# #                                     st.write("Check out mail regarding payment details and stay tuned for further updates!")
+#                                     st.success("A mail regarding payment procedure will be sent within 24 hrs. Check it out to complete your registration.")
 
-#                                     fun3()
-                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
-                                    # fun3(data[i][3],event,data[i][1],ch)
-                                    break
-                                else:
-                                    st.error("Invalid Register Contact Number")
-                                    break    
-                            else:
-                                st.error("Invalid Register Name")
-                                break
-                    else:
-                        st.error("Invalid Register ID.")
-            else:
-                    st.error("Invalid Register ID.")
-    if ch=="IETE membership holder":
-        st.header("Fill in the appropriate details ⬇️")
-        reg=st.text_input('Your register ID:')
-        # rollno=st.text_input('Your roll number: ')
-        sf=st.text_input('Your IETE SF membership number:')
-        name=st.text_input('Your name [Case sensitive]:')
-        ph=st.text_input('Your contact number:')
-        col1,col2,col3=st.columns([2,1,2])
-        with col2:
-            d=st.button("Submit")
-        if d:
-            sheet = client.open("Registration").sheet1
-            data=sheet.get_all_values()
-            if reg[:4] =="TZ23":
-                    creds7 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
-                    client7 = gspread.authorize(creds7)
-                    sheet7 = client7.open("Workshop").sheet1
-                    data7=sheet7.get_all_values()
-                    for i in range(1,len(data)):
-                        if(data[i][0]==reg):
-                            print(2)
-                            if(name != " "):
-                                if data[i][6]==ph:
-                                    sheet7.insert_row([reg,name,ph,data[i][3],ch,sf],len(data7)+1)
-                                    em(reg,name,data[i][3],html_wiete,"Complete your payment for Techverse workshop confirmation of TZ'23!")
-#                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
-                                    st.success("A mail regarding payment procedure will be sent within 24 hrs. Check it out to complete your registration.")
+# #                                     fun3()
+#                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+#                                     # fun3(data[i][3],event,data[i][1],ch)
+#                                     break
+#                                 else:
+#                                     st.error("Invalid Register Contact Number")
+#                                     break    
+#                             else:
+#                                 st.error("Invalid Register Name")
+#                                 break
+#                     else:
+#                         st.error("Invalid Register ID.")
+#             else:
+#                     st.error("Invalid Register ID.")
+#     if ch=="IETE membership holder":
+#         st.header("Fill in the appropriate details ⬇️")
+#         reg=st.text_input('Your register ID:')
+#         # rollno=st.text_input('Your roll number: ')
+#         sf=st.text_input('Your IETE SF membership number:')
+#         name=st.text_input('Your name [Case sensitive]:')
+#         ph=st.text_input('Your contact number:')
+#         col1,col2,col3=st.columns([2,1,2])
+#         with col2:
+#             d=st.button("Submit")
+#         if d:
+#             sheet = client.open("Registration").sheet1
+#             data=sheet.get_all_values()
+#             if reg[:4] =="TZ23":
+#                     creds7 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
+#                     client7 = gspread.authorize(creds7)
+#                     sheet7 = client7.open("Workshop").sheet1
+#                     data7=sheet7.get_all_values()
+#                     for i in range(1,len(data)):
+#                         if(data[i][0]==reg):
+#                             print(2)
+#                             if(name != " "):
+#                                 if data[i][6]==ph:
+#                                     sheet7.insert_row([reg,name,ph,data[i][3],ch,sf],len(data7)+1)
+#                                     em(reg,name,data[i][3],html_wiete,"Complete your payment for Techverse workshop confirmation of TZ'23!")
+# #                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
+#                                     st.success("A mail regarding payment procedure will be sent within 24 hrs. Check it out to complete your registration.")
                                 
-#                                     fun3()
-                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
-                                    # fun3(data[i][3],event,data[i][1],ch)
-                                    break
-                                else:
-                                    st.error("Invalid Register Contact Number")
-                                    break    
-                            else:
-                                st.error("Invalid Register Name")
-                                break
-                    else:
-                        st.error("Invalid Register ID.")
-            else:
-                    st.error("Invalid Register ID.")        
+# #                                     fun3()
+#                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+#                                     # fun3(data[i][3],event,data[i][1],ch)
+#                                     break
+#                                 else:
+#                                     st.error("Invalid Register Contact Number")
+#                                     break    
+#                             else:
+#                                 st.error("Invalid Register Name")
+#                                 break
+#                     else:
+#                         st.error("Invalid Register ID.")
+#             else:
+#                     st.error("Invalid Register ID.")        
         # st.header("Fill in the appropriate details ⬇️")
         # reg=st.text_input('Your register ID:')
         # name=st.text_input('Your name [Case sensitive]:')
@@ -5011,6 +5012,7 @@ elif event=="Techverse - Workshop":
         #     else:
         #                 st.error("Invalid Register ID.")        
 elif event=="Generic - Run":
+    st.error(" Online registrations are closed. Thank you!")
     p=st.selectbox("Select the number of participants: ",options=["--Choose--","One","Two"])
     if p=="One":
         st.header("Fill in the appropriate details ⬇️")
