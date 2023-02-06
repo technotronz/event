@@ -5012,7 +5012,7 @@ elif event=="Techverse - Workshop":
         #     else:
         #                 st.error("Invalid Register ID.")        
 elif event=="Generic - Run":
-    st.error(" Online registrations are closed. Thank you!")
+#     st.error(" Online registrations are closed. Thank you!")
     p=st.selectbox("Select the number of participants: ",options=["--Choose--","One","Two"])
     if p=="One":
         st.header("Fill in the appropriate details ⬇️")
