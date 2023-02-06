@@ -4763,45 +4763,45 @@ elif event=="Tactile Arena":
 #                 st.error("Invalid Participant 1 Register ID.")                 
 
 elif event=="triNiFTy":
-# 	st.error(" Online registrations are closed. Thank you!")
-        st.header("Fill in the appropriate details ⬇️")
-        reg=st.text_input('Your registration ID:')
-        name=st.text_input('Your name [Case sensitive]:')
-        ph=st.text_input('Your contact number:')
-        col1,col2,col3=st.columns([2,1,2])
-        with col2:
-            d=st.button("Submit")
-        if d:
-            sheet = client.open("Registration").sheet1
-            data=sheet.get_all_values()
-            if reg[:4] =="TZ23":
-                    creds6 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
-                    client6 = gspread.authorize(creds6)
-                    sheet6 = client6.open("trinifty").sheet1
-                    data6=sheet6.get_all_values()
-                    for i in range(1,len(data)):
-                        if(data[i][0]==reg):
-                            print(2)
-                            if(name != " "):
-                                if data[i][6]==ph:
-                                    sheet6.insert_row([reg,name,ph,data[i][3]],len(data6)+1)
-#                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
-                                    em2(reg,name,data[i][3],"February 4 & 5,2023",event,html_er)
-                                    st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
-                                    # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
-#                                     fun(data[i][3],event,data[i][1])
-                                    fun3()
-                                    break
-                                else:
-                                    st.error("Invalid Register Contact Number")
-                                    break    
-                            else:
-                                st.error("Invalid Register Name")
-                                break
-                    else:
-                        st.error("Invalid Register ID.")
-            else:
-                st.error("Invalid Register ID.")
+	st.error(" Online registrations are closed. Thank you!")
+#         st.header("Fill in the appropriate details ⬇️")
+#         reg=st.text_input('Your registration ID:')
+#         name=st.text_input('Your name [Case sensitive]:')
+#         ph=st.text_input('Your contact number:')
+#         col1,col2,col3=st.columns([2,1,2])
+#         with col2:
+#             d=st.button("Submit")
+#         if d:
+#             sheet = client.open("Registration").sheet1
+#             data=sheet.get_all_values()
+#             if reg[:4] =="TZ23":
+#                     creds6 = ServiceAccountCredentials.from_json_keyfile_name(api_enter, scope)
+#                     client6 = gspread.authorize(creds6)
+#                     sheet6 = client6.open("trinifty").sheet1
+#                     data6=sheet6.get_all_values()
+#                     for i in range(1,len(data)):
+#                         if(data[i][0]==reg):
+#                             print(2)
+#                             if(name != " "):
+#                                 if data[i][6]==ph:
+#                                     sheet6.insert_row([reg,name,ph,data[i][3]],len(data6)+1)
+# #                                     em(reg,name,data[i][3],html_wno,f"Successfully registered in {event} of TZ'23")
+#                                     em2(reg,name,data[i][3],"February 4 & 5,2023",event,html_er)
+#                                     st.success(f"Successfully registered to the {event}! (Email is sent to registered Mail ID)")
+#                                     # st.markdown('<form> <button class="w3-button w3-green">Click to complete/quit registration</button></form>', unsafe_allow_html=True)
+# #                                     fun(data[i][3],event,data[i][1])
+#                                     fun3()
+#                                     break
+#                                 else:
+#                                     st.error("Invalid Register Contact Number")
+#                                     break    
+#                             else:
+#                                 st.error("Invalid Register Name")
+#                                 break
+#                     else:
+#                         st.error("Invalid Register ID.")
+#             else:
+#                 st.error("Invalid Register ID.")
 elif event=="Techverse - Workshop":
     ch=st.selectbox("Select the category to avail your discount: ",options=["--Choose--","Coupon Code/Campus Ambassador","PSG Tech Student","IETE membership holder","None of the above"])
     if ch=="Coupon Code/Campus Ambassador":
